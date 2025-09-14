@@ -1,0 +1,1213 @@
+{
+    "time_2": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.joda.time.TestPartial_Basics::testWith_baseAndArgHaveNoRange_purify_3\n\njava.lang.IllegalArgumentException: Types array must not contain duplicate: era and year\n\n\tat org.joda.time.Partial.<init>(Partial.java:171)\n\n\tat org.joda.time.Partial.with(Partial.java:399)\n\n\tat org.joda.time.TestPartial_Basics.testWith_baseAndArgHaveNoRange_purify_3(TestPartial_Basics.java:1848)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat junit.framework.TestCase.runTest(TestCase.java:176)\n",
+                "test_function": "public void testWith_baseAndArgHaveNoRange_purify_3(){\n    Partial test=new Partial(DateTimeFieldType.year(),1);\n    Partial result=test.with(DateTimeFieldType.era(),1);\n    assertEquals(1,result.indexOf(DateTimeFieldType.year()));\n  }"
+            }
+        ]
+    },
+    "time_5": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.joda.time.TestPeriod_Basics::testNormalizedStandard_periodType_months1_purify_1\n\njava.lang.UnsupportedOperationException: Field is not supported\n\n\tat org.joda.time.PeriodType.setIndexedField(PeriodType.java:593)\n\n\tat org.joda.time.Period.withYears(Period.java:513)\n\n\tat org.joda.time.Period.normalizedStandard(Period.java:1012)\n\n\tat org.joda.time.TestPeriod_Basics.testNormalizedStandard_periodType_months1_purify_1(TestPeriod_Basics.java:2300)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n",
+                "test_function": "public void testNormalizedStandard_periodType_months1_purify_1(){\n    Period test=new Period(1,15,0,0,0,0,0,0);\n    Period result=test.normalizedStandard(PeriodType.months());\n    assertEquals(new Period(1,15,0,0,0,0,0,0),test);\n  }"
+            }
+        ]
+    },
+    "time_7": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.joda.time.format.TestDateTimeFormatter::testParseInto_monthDay_feb29_tokyo_endOfYear_purify_2\n\njunit.framework.AssertionFailedError: expected:<2004-02-29T23:59:59.999+09:00> but was:<2004-12-31T23:59:59.999+09:00>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:86)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:253)\n\n\tat org.joda.time.format.TestDateTimeFormatter.testParseInto_monthDay_feb29_tokyo_endOfYear_purify_2(TestDateTimeFormatter.java:1858)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n",
+                "test_function": "public void testParseInto_monthDay_feb29_tokyo_endOfYear_purify_2(){\n    DateTimeFormatter f=DateTimeFormat.forPattern(\"M d\").withLocale(Locale.UK);\n    MutableDateTime result=new MutableDateTime(2004,12,31,23,59,59,999,TOKYO);\n    assertEquals(new MutableDateTime(2004,2,29,23,59,59,999,TOKYO),result);\n  }"
+            }
+        ]
+    },
+    "time_15": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.joda.time.field.TestFieldUtils::testSafeMultiplyLongInt_purify_13\n\njunit.framework.AssertionFailedError\n\n\tat junit.framework.Assert.fail(Assert.java:55)\n\n\tat junit.framework.Assert.fail(Assert.java:64)\n\n\tat junit.framework.TestCase.fail(TestCase.java:235)\n\n\tat org.joda.time.field.TestFieldUtils.testSafeMultiplyLongInt_purify_13(TestFieldUtils.java:489)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n",
+                "test_function": "public void testSafeMultiplyLongInt_purify_13(){\n    try {\n      FieldUtils.safeMultiply(Long.MIN_VALUE,-1);\n      fail();\n    }"
+            }
+        ]
+    },
+    "time_1": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.joda.time.TestPartial_Constructors::testConstructorEx7_TypeArray_intArray_purify_4\n\njunit.framework.AssertionFailedError\n\n\tat junit.framework.Assert.fail(Assert.java:55)\n\n\tat junit.framework.Assert.fail(Assert.java:64)\n\n\tat junit.framework.TestCase.fail(TestCase.java:235)\n\n\tat org.joda.time.TestPartial_Constructors.testConstructorEx7_TypeArray_intArray_purify_4(TestPartial_Constructors.java:716)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n",
+                "test_function": "public void testConstructorEx7_TypeArray_intArray_purify_4() throws Throwable {\n    int[] values=new int[]{1,1,1}"
+            }
+        ]
+    },
+    "time_16": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.joda.time.format.TestDateTimeFormatter::testParseInto_monthOnly_parseStartYear_purify_2\n\njunit.framework.AssertionFailedError: expected:<2004-01-01T12:20:30.000+09:00> but was:<2004-02-01T12:20:30.000+09:00>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:86)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:253)\n\n\tat org.joda.time.format.TestDateTimeFormatter.testParseInto_monthOnly_parseStartYear_purify_2(TestDateTimeFormatter.java:1632)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n",
+                "test_function": "public void testParseInto_monthOnly_parseStartYear_purify_2(){\n    DateTimeFormatter f=DateTimeFormat.forPattern(\"M\").withLocale(Locale.UK);\n    MutableDateTime result=new MutableDateTime(2004,2,1,12,20,30,0,TOKYO);\n    assertEquals(new MutableDateTime(2004,1,1,12,20,30,0,TOKYO),result);\n  }"
+            }
+        ]
+    },
+    "time_11": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.joda.time.tz.TestCompiler::testDateTimeZoneBuilder\n\njunit.framework.AssertionFailedError\n\n\tat junit.framework.Assert.fail(Assert.java:55)\n\n\tat junit.framework.Assert.assertTrue(Assert.java:22)\n\n\tat junit.framework.Assert.assertNotNull(Assert.java:256)\n\n\tat junit.framework.Assert.assertNotNull(Assert.java:248)\n\n\tat junit.framework.TestCase.assertNotNull(TestCase.java:417)\n\n\tat org.joda.time.tz.TestCompiler.testDateTimeZoneBuilder(TestCompiler.java:60)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n",
+                "test_function": "public void testDateTimeZoneBuilder() throws Exception {\n    getTestDataTimeZoneBuilder().toDateTimeZone(\"TestDTZ1\",true);\n    final DateTimeZone[] zone=new DateTimeZone[1];\n    Thread t=new Thread(new Runnable(){\n      public void run(){\n        zone[0]=getTestDataTimeZoneBuilder().toDateTimeZone(\"TestDTZ2\",true);\n      }"
+            }
+        ]
+    },
+    "jacksoncore_5": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.fasterxml.jackson.core.TestJsonPointer::testWonkyNumber173\n\njava.lang.NumberFormatException: For input string: \"1e0\"\n\n\tat java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\n\tat java.lang.Integer.parseInt(Integer.java:580)\n\n\tat java.lang.Integer.parseInt(Integer.java:615)\n\n\tat com.fasterxml.jackson.core.io.NumberInput.parseInt(NumberInput.java:87)\n\n\tat com.fasterxml.jackson.core.JsonPointer._parseIndex(JsonPointer.java:147)\n\n\tat com.fasterxml.jackson.core.JsonPointer.<init>(JsonPointer.java:47)\n\n\tat com.fasterxml.jackson.core.JsonPointer._parseTail(JsonPointer.java:170)\n\n\tat com.fasterxml.jackson.core.JsonPointer.compile(JsonPointer.java:65)\n",
+                "test_function": "public void testWonkyNumber173() throws Exception {\n    JsonPointer ptr=JsonPointer.compile(\"/1e0\");\n    assertFalse(ptr.matches());\n  }"
+            }
+        ]
+    },
+    "jacksoncore_4": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.fasterxml.jackson.core.util.TestTextBuffer::testExpand\n\njunit.framework.AssertionFailedError: Expected buffer of 262145 to expand, did not, length now 262144\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.TestCase.fail(TestCase.java:227)\n\n\tat com.fasterxml.jackson.core.util.TestTextBuffer.testExpand(TestTextBuffer.java:112)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat junit.framework.TestCase.runTest(TestCase.java:176)\n",
+                "test_function": "public void testExpand(){\n    TextBuffer tb=new TextBuffer(new BufferRecycler());\n    char[] buf=tb.getCurrentSegment();\n    while (buf.length < 500 * 1000) {\n      char[] old=buf;\n      buf=tb.expandCurrentSegment();\n      if (old.length >= buf.length) {\n        fail(\"Expected buffer of \" + old.length + \" to expand, did not, length now \"+ buf.length);\n      }"
+            }
+        ]
+    },
+    "jacksoncore_14": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.fasterxml.jackson.core.io.TestIOContext::testAllocations_purify_5\n\njunit.framework.AssertionFailedError: Expected an exception with one of substrings ([smaller than original]): got one with message \"Trying to release buffer not owned by the context\"\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.TestCase.fail(TestCase.java:227)\n\n\tat com.fasterxml.jackson.core.BaseTest.verifyException(BaseTest.java:390)\n\n\tat com.fasterxml.jackson.core.io.TestIOContext.testAllocations_purify_5(TestIOContext.java:249)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n",
+                "test_function": "public void testAllocations_purify_5() throws Exception {\n    IOContext ctxt=new IOContext(new BufferRecycler(),\"N/A\",true);\n    try {\n      ctxt.allocReadIOBuffer();\n    }"
+            }
+        ]
+    },
+    "jacksoncore_6": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.fasterxml.jackson.core.TestJsonPointer::testIZeroIndex_purify_2\n\njunit.framework.AssertionFailedError: expected:<-1> but was:<0>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:234)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:241)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:409)\n\n\tat com.fasterxml.jackson.core.TestJsonPointer.testIZeroIndex_purify_2(TestJsonPointer.java:174)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n",
+                "test_function": "public void testIZeroIndex_purify_2() throws Exception {\n    JsonPointer ptr=JsonPointer.compile(\"/0\");\n    ptr=JsonPointer.compile(\"/00\");\n    assertEquals(-1,ptr.getMatchingIndex());\n  }"
+            }
+        ]
+    },
+    "jacksoncore_8": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.fasterxml.jackson.core.util.TestTextBuffer::testEmpty_purify_1\n\njava.lang.NullPointerException\n\n\tat com.fasterxml.jackson.core.util.TestTextBuffer.testEmpty_purify_1(TestTextBuffer.java:143)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat junit.framework.TestCase.runTest(TestCase.java:176)\n\n\tat junit.framework.TestCase.runBare(TestCase.java:141)\n\n\tat junit.framework.TestResult$1.protect(TestResult.java:122)\n",
+                "test_function": "public void testEmpty_purify_1(){\n    TextBuffer tb=new TextBuffer(new BufferRecycler());\n    tb.resetWithEmpty();\n    assertTrue(tb.getTextBuffer().length == 0);\n  }"
+            }
+        ]
+    },
+    "closure_73": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.CodePrinterTest::testUnicode_purify_3\n\njunit.framework.ComparisonFailure: expected:<var x=\"[\\u007f]\"> but was:<var x=\"[\u007f]\">\n\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:107)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:269)\n\n\tat com.google.javascript.jscomp.CodePrinterTest.assertPrint(CodePrinterTest.java:300)\n\n\tat com.google.javascript.jscomp.CodePrinterTest.testUnicode_purify_3(CodePrinterTest.java:1267)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testUnicode_purify_3(){\n    assertPrint(\"var x ='\\\\x7f';\",\"var x=\\\"\\\\u007f\\\"\");\n  }"
+            }
+        ]
+    },
+    "closure_64": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.CommandLineRunnerTest::testES5StrictUseStrictMultipleInputs_purify_2\n\njunit.framework.AssertionFailedError: expected:<17> but was:<-1>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:234)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:241)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:409)\n\n\tat com.google.javascript.jscomp.CommandLineRunnerTest.testES5StrictUseStrictMultipleInputs_purify_2(CommandLineRunnerTest.java:1635)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n",
+                "test_function": "public void testES5StrictUseStrictMultipleInputs_purify_2(){\n    args.add(\"--language_in=ECMASCRIPT5_STRICT\");\n    Compiler compiler=compile(new String[]{\"var x = f.function\",\"var y = f.function\",\"var z = f.function\"}"
+            }
+        ]
+    },
+    "closure_33": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.TypeCheckTest::testIssue700\n\njunit.framework.AssertionFailedError: unexpected warnings(s):\n\nJSC_TYPE_MISMATCH. actual parameter 1 of temp3 does not match formal parameter\n\nfound   : {b: boolean, n: number, text: (string|undefined)}\n\nrequired: (undefined|{b: boolean, n: number, text: string}) at [testcode] line 30 : 21\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.TestCase.fail(TestCase.java:227)\n\n\tat com.google.javascript.jscomp.TypeCheckTest.testTypes(TypeCheckTest.java:17900)\n\n\tat com.google.javascript.jscomp.TypeCheckTest.testTypes(TypeCheckTest.java:17880)\n\n\tat com.google.javascript.jscomp.TypeCheckTest.testTypes(TypeCheckTest.java:17851)\n",
+                "test_function": "public void testIssue700() throws Exception {\n    testTypes(\"/**\\n\" + \" * @param {{text: string}"
+            }
+        ]
+    },
+    "closure_52": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.CodePrinterTest::testNumericKeys_purify_2\n\njunit.framework.ComparisonFailure: expected:<var x={[\"010\"]:1}> but was:<var x={[10]:1}>\n\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:107)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:269)\n\n\tat com.google.javascript.jscomp.CodePrinterTest.assertPrint(CodePrinterTest.java:302)\n\n\tat com.google.javascript.jscomp.CodePrinterTest.testNumericKeys_purify_2(CodePrinterTest.java:1325)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testNumericKeys_purify_2(){\n    assertPrint(\"var x = {'010': 1}"
+            }
+        ]
+    },
+    "closure_170": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.FlowSensitiveInlineVariablesTest::testVarAssinInsideHookIssue965\n\njunit.framework.AssertionFailedError: \n\nExpected: function _func(){var i=0;return 1?i=5:0,i}\n\nResult: function _func(){var i;return 1?i=5:0,0}\n\nNode tree inequality:\n\nTree1:\n\nBLOCK [synthetic: 1]\n\n    SCRIPT 1 [synthetic: 1] [source_file: expected0] [input_id: InputId: expected0]\n\n        FUNCTION _func 1 [source_file: expected0]\n\n            NAME _func 1 [source_file: expected0]\n",
+                "test_function": "public void testVarAssinInsideHookIssue965(){\n    noInline(\"var i = 0; return 1 ? (i = 5) : 0, i;\");\n    noInline(\"var i = 0; return (1 ? (i = 5) : 0) ? i : 0;\");\n    noInline(\"var i = 0; return (1 ? (i = 5) : 0) || i;\");\n    noInline(\"var i = 0; return (1 ? (i = 5) : 0) * i;\");\n  }"
+            }
+        ]
+    },
+    "closure_115": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.InlineFunctionsTest::testInlineFunctions6\n\njunit.framework.AssertionFailedError: \n\nExpected: alert(baz(foo(1+2)))\n\nResult: var JSCompiler_temp_const$$0=alert;var JSCompiler_inline_result$$1;JSCompiler_inline_result$$1=baz(foo(1+2));JSCompiler_temp_const$$0(JSCompiler_inline_result$$1)\n\nNode tree inequality:\n\nTree1:\n\nBLOCK [synthetic: 1]\n\n    SCRIPT 1 [synthetic: 1] [source_file: expected0] [input_id: InputId: expected0]\n\n        EXPR_RESULT 1 [source_file: expected0]\n\n            CALL 1 [free_call: 1] [source_file: expected0]\n",
+                "test_function": "public void testInlineFunctions6(){\n    test(\"function BAR_FN(x, y, z) { return z(foo(x + y)) }"
+            }
+        ]
+    },
+    "closure_17": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.TypeCheckTest::testIssue688\n\njunit.framework.ComparisonFailure: expected:<in[consistent return type\n\nfound   : (TwoNumbers|null)\n\nrequired: number]> but was:<in[itializing variable\n\nfound   : (TwoNumbers|null)\n\nrequired: {first: number, second: number}]>\n\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:107)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:269)\n\n\tat com.google.javascript.jscomp.TypeCheckTest.testTypes(TypeCheckTest.java:18204)\n",
+                "test_function": "public void testIssue688() throws Exception {\n    testTypes(\"/** @const */ var SOME_DEFAULT =\\n\" + \"    /** @type {TwoNumbers}"
+            }
+        ]
+    },
+    "closure_62": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.LightweightMessageFormatterTest::testFormatErrorSpaceEndOfLine2\n\njunit.framework.ComparisonFailure: expected:<...iption here\n\nif (foo\n\n[       ^\n\n]> but was:<...iption here\n\nif (foo\n\n[]>\n\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:107)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:269)\n",
+                "test_function": "public void testFormatErrorSpaceEndOfLine2() throws Exception {\n    JSError error=JSError.make(\"javascript/complex.js\",6,7,FOO_TYPE);\n    LightweightMessageFormatter formatter=formatter(\"if (foo\");\n    assertEquals(\"javascript/complex.js:6: ERROR - error description here\\n\" + \"if (foo\\n\" + \"       ^\\n\",formatter.formatError(error));\n  }"
+            }
+        ]
+    },
+    "closure_8": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.CollapseVariableDeclarationsTest::testIssue820\n\njunit.framework.AssertionFailedError: \n\nExpected: function f(a){var b=1;a=2;var c}\n\nResult: function f(a){var b=1,a=2,c}\n\nNode tree inequality:\n\nTree1:\n\nBLOCK [synthetic: 1]\n\n    SCRIPT 1 [synthetic: 1] [source_file: expected0] [input_id: InputId: expected0]\n\n        FUNCTION f 1 [source_file: expected0]\n\n            NAME f 1 [source_file: expected0]\n",
+                "test_function": "public void testIssue820() throws Exception {\n    testSame(\"function f(a){ var b=1; a=2; var c; }"
+            }
+        ]
+    },
+    "closure_125": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.TypeCheckTest::testIssue1002\n\njava.lang.IllegalStateException\n\n\tat com.google.common.base.Preconditions.checkState(Preconditions.java:133)\n\n\tat com.google.javascript.rhino.jstype.FunctionType.getInstanceType(FunctionType.java:891)\n\n\tat com.google.javascript.jscomp.TypeCheck.visitNew(TypeCheck.java:1462)\n\n\tat com.google.javascript.jscomp.TypeCheck.visit(TypeCheck.java:385)\n\n\tat com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:454)\n\n\tat com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:446)\n\n\tat com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:446)\n\n\tat com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:446)\n",
+                "test_function": "public void testIssue1002() throws Exception {\n    testTypes(\"/** @interface */\" + \"var I = function() {}"
+            }
+        ]
+    },
+    "closure_68": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.parsing.JsDocInfoParserTest::testIssue477\n\njunit.framework.AssertionFailedError: extra warning: Unexpected end of file\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat com.google.javascript.jscomp.testing.TestErrorReporter.warning(TestErrorReporter.java:35)\n\n\tat com.google.javascript.jscomp.parsing.JsDocInfoParser$ErrorReporterParser.addParserWarning(JsDocInfoParser.java:36)\n\n\tat com.google.javascript.jscomp.parsing.JsDocInfoParser.parse(JsDocInfoParser.java:648)\n\n\tat com.google.javascript.jscomp.parsing.JsDocInfoParserTest.parse(JsDocInfoParserTest.java:6969)\n\n\tat com.google.javascript.jscomp.parsing.JsDocInfoParserTest.parse(JsDocInfoParserTest.java:6960)\n\n\tat com.google.javascript.jscomp.parsing.JsDocInfoParserTest.parse(JsDocInfoParserTest.java:6957)\n\n\tat com.google.javascript.jscomp.parsing.JsDocInfoParserTest.testIssue477(JsDocInfoParserTest.java:1603)\n",
+                "test_function": "public void testIssue477() throws Exception {\n    parse(\"@type function */\",\"Bad type annotation. missing opening (\");\n  }"
+            }
+        ]
+    },
+    "closure_66": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.TypeCheckTest::testGetTypedPercent6\n\njunit.framework.AssertionFailedError: expected:<100.0> but was:<66.66666666666667>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:120)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:129)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:288)\n\n\tat com.google.javascript.jscomp.TypeCheckTest.testGetTypedPercent6(TypeCheckTest.java:14954)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n",
+                "test_function": "public void testGetTypedPercent6() throws Exception {\n    String js=\"a = {TRUE: 1, FALSE: 0}"
+            }
+        ]
+    },
+    "closure_80": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.NodeUtilTest::testIsBooleanResult_purify_36\n\njunit.framework.AssertionFailedError\n\n\tat junit.framework.Assert.fail(Assert.java:55)\n\n\tat junit.framework.Assert.assertTrue(Assert.java:22)\n\n\tat junit.framework.Assert.assertTrue(Assert.java:31)\n\n\tat junit.framework.TestCase.assertTrue(TestCase.java:201)\n\n\tat com.google.javascript.jscomp.NodeUtilTest.testIsBooleanResult_purify_36(NodeUtilTest.java:2388)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testIsBooleanResult_purify_36(){\n    assertTrue(NodeUtil.isBooleanResult(getNode(\"delete a\")));\n  }"
+            }
+        ]
+    },
+    "closure_48": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.TypeCheckTest::testIssue586\n\njunit.framework.AssertionFailedError: expected a warning\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.assertTrue(Assert.java:22)\n\n\tat junit.framework.TestCase.assertTrue(TestCase.java:192)\n\n\tat com.google.javascript.jscomp.TypeCheckTest.testTypes(TypeCheckTest.java:17232)\n\n\tat com.google.javascript.jscomp.TypeCheckTest.testTypes(TypeCheckTest.java:17217)\n\n\tat com.google.javascript.jscomp.TypeCheckTest.testTypes(TypeCheckTest.java:17188)\n\n\tat com.google.javascript.jscomp.TypeCheckTest.testIssue586(TypeCheckTest.java:10699)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n",
+                "test_function": "public void testIssue586() throws Exception {\n    testTypes(\"/** @constructor */\" + \"var MyClass = function() {}"
+            }
+        ]
+    },
+    "closure_107": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.CommandLineRunnerTest::testGetMsgWiringNoWarnings\n\njunit.framework.AssertionFailedError: Expected no warnings or errors\n\nErrors: \n\nJSC_MSG_NOT_INITIALIZED_USING_NEW_SYNTAX. message not initialized using goog.getMsg at input0 line 1 : 28\n\nJSC_MSG_TREE_MALFORMED. Message parse tree malformed. Cannot parse value of message MSG_FOO at input0 line 1 : 38Warnings: \n\n expected:<0> but was:<2>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:234)\n",
+                "test_function": "public void testGetMsgWiringNoWarnings() throws Exception {\n    args.add(\"--compilation_level=ADVANCED_OPTIMIZATIONS\");\n    test(\"/** @desc A bad foo. */ var MSG_FOO = 1;\",\"\");\n  }"
+            }
+        ]
+    },
+    "closure_91": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.CheckGlobalThisTest::testLendsAnnotation3\n\njunit.framework.AssertionFailedError: Unexpected error(s): JSC_USED_GLOBAL_THIS. dangerous use of the global this object at testcode line 1 : 110 expected:<0> but was:<1>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:234)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:401)\n\n\tat com.google.javascript.jscomp.CompilerTestCase.test(CompilerTestCase.java:733)\n\n\tat com.google.javascript.jscomp.CompilerTestCase.test(CompilerTestCase.java:377)\n\n\tat com.google.javascript.jscomp.CompilerTestCase.test(CompilerTestCase.java:306)\n",
+                "test_function": "public void testLendsAnnotation3(){\n    testSame(\"/** @constructor */ function F() {}"
+            }
+        ]
+    },
+    "closure_74": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.PeepholeFoldConstantsTest::testCommutativeOperators\n\njunit.framework.ComparisonFailure: Expressions did not fold the same\n\nexprA: undefined == !0\n\nexprB: !0 == undefined expected:<[false]> but was:<[!0==undefined]>\n\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:261)\n\n\tat com.google.javascript.jscomp.PeepholeFoldConstantsTest.assertSameResults(PeepholeFoldConstantsTest.java:1725)\n\n\tat com.google.javascript.jscomp.PeepholeFoldConstantsTest.assertSameResultsOrUncollapsed(PeepholeFoldConstantsTest.java:1721)\n\n\tat com.google.javascript.jscomp.PeepholeFoldConstantsTest.testCommutativeOperators(PeepholeFoldConstantsTest.java:1698)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n",
+                "test_function": "public void testCommutativeOperators(){\n    List<String> operators=ImmutableList.of(\"==\",\"!=\",\"===\",\"!==\",\"*\",\"|\",\"&\",\"^\");\n    for (int iOperandA=0; iOperandA < LITERAL_OPERANDS.size(); iOperandA++) {\n      for (int iOperandB=iOperandA; iOperandB < LITERAL_OPERANDS.size(); iOperandB++) {\n        for (int iOp=0; iOp < operators.size(); iOp++) {\n          String a=LITERAL_OPERANDS.get(iOperandA);\n          String b=LITERAL_OPERANDS.get(iOperandB);\n          String op=operators.get(iOp);\n          assertSameResultsOrUncollapsed(join(a,op,b),join(b,op,a));\n        }"
+            }
+        ]
+    },
+    "closure_31": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.CommandLineRunnerTest::testDependencySortingWhitespaceMode\n\njunit.framework.AssertionFailedError: \n\nExpected: goog.provide(\"hops\");goog.provide(\"beer\");goog.require(\"hops\");goog.require(\"beer\")\n\nResult: goog.require(\"beer\");goog.provide(\"beer\");goog.require(\"hops\");goog.provide(\"hops\")\n\nNode tree inequality:\n\nTree1:\n\nBLOCK [synthetic: 1]\n\n    SCRIPT 1 [synthetic: 1] [source_file: input0] [input_id: InputId: input0]\n\n        EXPR_RESULT 1 [source_file: input0]\n\n            CALL 1 [source_file: input0]\n",
+                "test_function": "public void testDependencySortingWhitespaceMode(){\n    args.add(\"--manage_closure_dependencies\");\n    args.add(\"--compilation_level=WHITESPACE_ONLY\");\n    test(new String[]{\"goog.require('beer');\",\"goog.provide('beer');\\ngoog.require('hops');\",\"goog.provide('hops');\"}"
+            }
+        ]
+    },
+    "closure_120": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.InlineVariablesTest::testExternalIssue1053\n\njunit.framework.AssertionFailedError: \n\nExpected: var u;function f(){u=Random();var x=u;f();alert(x===u)}\n\nResult: var u;function f(){u=Random();f();alert(u===u)}\n\nNode tree inequality:\n\nTree1:\n\nBLOCK [synthetic: 1]\n\n    SCRIPT 1 [synthetic: 1] [source_file: expected0] [input_id: InputId: expected0]\n\n        VAR 1 [source_file: expected0]\n\n            NAME u 1 [source_file: expected0]\n",
+                "test_function": "public void testExternalIssue1053(){\n    testSame(\"var u; function f() { u = Random(); var x = u; f(); alert(x===u)}"
+            }
+        ]
+    },
+    "closure_92": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.ProcessClosurePrimitivesTest::testProvideInIndependentModules4\n\njunit.framework.AssertionFailedError: \n\nExpected: var apps={};apps.foo={};apps.foo.bar={};apps.foo.bar.B={};apps.foo.bar.C={}\n\nResult: var apps={};apps.foo.bar={};apps.foo={};apps.foo.bar.B={};apps.foo.bar.C={}\n\nNode tree inequality:\n\nTree1:\n\nBLOCK [synthetic: 1]\n\n    SCRIPT 1 [sourcename: expected0] [synthetic: 1]\n\n        VAR 1 [sourcename: expected0]\n\n            NAME apps 1 [sourcename: expected0]\n",
+                "test_function": "public void testProvideInIndependentModules4(){\n    test(createModuleStar(\"goog.provide('apps');\",\"goog.provide('apps.foo.bar.B');\",\"goog.provide('apps.foo.bar.C');\"),new String[]{\"var apps = {}"
+            }
+        ]
+    },
+    "closure_12": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.FlowSensitiveInlineVariablesTest::testIssue794b\n\njunit.framework.AssertionFailedError: \n\nExpected: function _func(){var x=1;try{x=x+someFunction()}catch(e){}x=x+1;try{x=x+someFunction()}catch(e$$1){}return x}\n\nResult: function _func(){var x;try{x=1+someFunction()}catch(e){}try{x=x+1+someFunction()}catch(e$$1){}return x}\n\nNode tree inequality:\n\nTree1:\n\nBLOCK [synthetic: 1]\n\n    SCRIPT 1 [synthetic: 1] [source_file: expected0] [input_id: InputId: expected0]\n\n        FUNCTION _func 1 [source_file: expected0]\n\n            NAME _func 1 [source_file: expected0]\n",
+                "test_function": "public void testIssue794b(){\n    noInline(\"var x = 1; \" + \"try { x = x + someFunction(); }"
+            }
+        ]
+    },
+    "closure_113": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.VarCheckTest::testNoUndeclaredVarWhenUsingClosurePass\n\njunit.framework.AssertionFailedError: There should be one error. required \"namespace.Class1\" namespace never provided\n\nvariable goog is undeclared\n\n expected:<1> but was:<2>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:234)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:401)\n\n\tat com.google.javascript.jscomp.CompilerTestCase.test(CompilerTestCase.java:999)\n",
+                "test_function": "public void testNoUndeclaredVarWhenUsingClosurePass(){\n    enableClosurePass();\n    test(\"goog.require('namespace.Class1');\\n\",null,ProcessClosurePrimitives.MISSING_PROVIDE_ERROR);\n  }"
+            }
+        ]
+    },
+    "closure_82": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.rhino.jstype.FunctionTypeTest::testEmptyFunctionTypes_purify_1\n\njunit.framework.AssertionFailedError\n\n\tat junit.framework.Assert.fail(Assert.java:55)\n\n\tat junit.framework.Assert.assertTrue(Assert.java:22)\n\n\tat junit.framework.Assert.assertTrue(Assert.java:31)\n\n\tat junit.framework.TestCase.assertTrue(TestCase.java:201)\n\n\tat com.google.javascript.rhino.jstype.FunctionTypeTest.testEmptyFunctionTypes_purify_1(FunctionTypeTest.java:223)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testEmptyFunctionTypes_purify_1(){\n    assertTrue(LEAST_FUNCTION_TYPE.isEmptyType());\n  }"
+            }
+        ]
+    },
+    "closure_27": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.rhino.IRTest::testIssue727_3\n\njava.lang.IllegalStateException\n\n\tat com.google.common.base.Preconditions.checkState(Preconditions.java:129)\n\n\tat com.google.javascript.rhino.IR.block(IR.java:51)\n\n\tat com.google.javascript.rhino.IR.tryCatch(IR.java:178)\n\n\tat com.google.javascript.rhino.IR.tryCatchFinally(IR.java:186)\n\n\tat com.google.javascript.rhino.IRTest.testIssue727_3(IRTest.java:52)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testIssue727_3(){\n    testIR(IR.tryCatchFinally(IR.block(),IR.catchNode(IR.name(\"e\"),IR.block()),IR.block()),\"TRY\\n\" + \"    BLOCK\\n\" + \"    BLOCK\\n\"+ \"        CATCH\\n\"+ \"            NAME e\\n\"+ \"            BLOCK\\n\"+ \"    BLOCK\\n\");\n  }"
+            }
+        ]
+    },
+    "closure_60": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.NodeUtilTest::testGetBooleanValue_purify_13\n\njunit.framework.AssertionFailedError: expected:<unknown> but was:<false>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:86)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:253)\n\n\tat com.google.javascript.jscomp.NodeUtilTest.assertPureBooleanUnknown(NodeUtilTest.java:101)\n\n\tat com.google.javascript.jscomp.NodeUtilTest.testGetBooleanValue_purify_13(NodeUtilTest.java:2093)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n",
+                "test_function": "public void testGetBooleanValue_purify_13(){\n    assertPureBooleanUnknown(\"void foo()\");\n  }"
+            }
+        ]
+    },
+    "closure_99": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.CheckGlobalThisTest::testInterface1\n\njunit.framework.AssertionFailedError: Unexpected error(s): JSC_USED_GLOBAL_THIS. dangerous use of the global this object at testcode line 1 : 54 expected:<0> but was:<1>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:234)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:401)\n\n\tat com.google.javascript.jscomp.CompilerTestCase.test(CompilerTestCase.java:712)\n\n\tat com.google.javascript.jscomp.CompilerTestCase.test(CompilerTestCase.java:372)\n\n\tat com.google.javascript.jscomp.CompilerTestCase.test(CompilerTestCase.java:301)\n",
+                "test_function": "public void testInterface1(){\n    testSame(\"/** @interface */function A() { /** @type {string}"
+            }
+        ]
+    },
+    "closure_65": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.CodePrinterTest::testZero_purify_4\n\njunit.framework.ComparisonFailure: expected:<var x=\"\\0[00]3\"> but was:<var x=\"\\0[]3\">\n\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:107)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:269)\n\n\tat com.google.javascript.jscomp.CodePrinterTest.assertPrint(CodePrinterTest.java:300)\n\n\tat com.google.javascript.jscomp.CodePrinterTest.testZero_purify_4(CodePrinterTest.java:1321)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testZero_purify_4(){\n    assertPrint(\"var x ='\\\\u00003';\",\"var x=\\\"\\\\0003\\\"\");\n  }"
+            }
+        ]
+    },
+    "closure_21": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.CheckSideEffectsTest::testUselessCode\n\njunit.framework.AssertionFailedError: There should be one warning, repeated 1 time(s). expected:<1> but was:<0>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:234)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:401)\n\n\tat com.google.javascript.jscomp.CompilerTestCase.test(CompilerTestCase.java:841)\n\n\tat com.google.javascript.jscomp.CompilerTestCase.test(CompilerTestCase.java:445)\n\n\tat com.google.javascript.jscomp.CompilerTestCase.test(CompilerTestCase.java:371)\n",
+                "test_function": "public void testUselessCode(){\n    test(\"function f(x) { if(x) return; }"
+            }
+        ]
+    },
+    "closure_59": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.CommandLineRunnerTest::testCheckGlobalThisOff\n\njunit.framework.AssertionFailedError: Expected no warnings or errors\n\nErrors: \n\nWarnings: \n\nJSC_USED_GLOBAL_THIS. dangerous use of the global this object at input0 line 1 : 15 expected:<0> but was:<1>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:234)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:401)\n",
+                "test_function": "public void testCheckGlobalThisOff(){\n    args.add(\"--warning_level=VERBOSE\");\n    args.add(\"--jscomp_off=globalThis\");\n    testSame(\"function f() { this.a = 3; }"
+            }
+        ]
+    },
+    "closure_133": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.parsing.JsDocInfoParserTest::testTextExtents\n\njava.lang.IllegalStateException: Recorded bad position information\n\nstart-char: 14\n\nend-char: 13\n\n\tat com.google.javascript.rhino.SourcePosition.setPositionInformation(SourcePosition.java:42)\n\n\tat com.google.javascript.rhino.JSDocInfoBuilder.markText(JSDocInfoBuilder.java:111)\n\n\tat com.google.javascript.jscomp.parsing.JsDocInfoParser.extractMultilineTextualBlock(JsDocInfoParser.java:1143)\n\n\tat com.google.javascript.jscomp.parsing.JsDocInfoParser.extractMultilineTextualBlock(JsDocInfoParser.java:1013)\n\n\tat com.google.javascript.jscomp.parsing.JsDocInfoParser.parse(JsDocInfoParser.java:686)\n\n\tat com.google.javascript.jscomp.parsing.JsDocInfoParserTest.parse(JsDocInfoParserTest.java:7502)\n",
+                "test_function": "public void testTextExtents(){\n    parse(\"@return {@code foo}"
+            }
+        ]
+    },
+    "closure_10": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.PeepholeFoldConstantsTest::testIssue821\n\njunit.framework.AssertionFailedError: \n\nExpected: var a=(Math.random()>0.5?\"1\":2)+3+4\n\nResult: var a=(Math.random()>0.5?1:2)+7\n\nNode tree inequality:\n\nTree1:\n\nBLOCK [synthetic: 1]\n\n    SCRIPT 1 [synthetic: 1] [source_file: expected0] [input_id: InputId: expected0]\n\n        VAR 1 [source_file: expected0]\n\n            NAME a 1 [source_file: expected0]\n",
+                "test_function": "public void testIssue821(){\n    foldSame(\"var a =(Math.random()>0.5? '1' : 2 ) + 3 + 4;\");\n    foldSame(\"var a = ((Math.random() ? 0 : 1) ||\" + \"(Math.random()>0.5? '1' : 2 )) + 3 + 4;\");\n  }"
+            }
+        ]
+    },
+    "closure_121": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.InlineVariablesTest::testExternalIssue1053\n\njunit.framework.AssertionFailedError: \n\nExpected: var u;function f(){u=Random();var x=u;f();alert(x===u)}\n\nResult: var u;function f(){u=Random();f();alert(u===u)}\n\nNode tree inequality:\n\nTree1:\n\nBLOCK [synthetic: 1]\n\n    SCRIPT 1 [synthetic: 1] [source_file: expected0] [input_id: InputId: expected0]\n\n        VAR 1 [source_file: expected0]\n\n            NAME u 1 [source_file: expected0]\n",
+                "test_function": "public void testExternalIssue1053(){\n    testSame(\"var u; function f() { u = Random(); var x = u; f(); alert(x===u)}"
+            }
+        ]
+    },
+    "closure_85": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.UnreachableCodeEliminationTest::testIssue311\n\njava.lang.RuntimeException: INTERNAL COMPILER ERROR.\n\nPlease report this problem.\n\nnull\n\n  Node(BREAK): testcode:9:6\n\n      break;\n\n  Parent: NULL\n\n\tat com.google.javascript.jscomp.NodeUtil.isTryFinallyNode(NodeUtil.java:1109)\n\n\tat com.google.javascript.jscomp.NodeUtil.removeChild(NodeUtil.java:1125)\n\n\tat com.google.javascript.jscomp.UnreachableCodeElimination.removeDeadExprStatementSafely(UnreachableCodeElimination.java:200)\n",
+                "test_function": "public void testIssue311(){\n    test(\"function a(b) {\\n\" + \"  switch (b.v) {\\n\" + \"    case 'SWITCH':\\n\"+ \"      if (b.i >= 0) {\\n\"+ \"        return b.o;\\n\"+ \"      }"
+            }
+        ]
+    },
+    "closure_131": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.ConvertToDottedPropertiesTest::testDoNotConvert\n\njunit.framework.AssertionFailedError: \n\nExpected: a[\"A\\u0004\"]\n\nResult: a.A\u0004\n\nNode tree inequality:\n\nTree1:\n\nBLOCK [synthetic: 1]\n\n    SCRIPT 1 [synthetic: 1] [source_file: expected0] [input_id: InputId: expected0]\n\n        EXPR_RESULT 1 [source_file: expected0]\n\n            GETELEM 1 [source_file: expected0]\n",
+                "test_function": "public void testDoNotConvert(){\n    testSame(\"a[0]\");\n    testSame(\"a['']\");\n    testSame(\"a[' ']\");\n    testSame(\"a[',']\");\n    testSame(\"a[';']\");\n    testSame(\"a[':']\");\n    testSame(\"a['.']\");\n    testSame(\"a['0']\");\n    testSame(\"a['p ']\");\n    testSame(\"a['p' + '']\");\n    testSame(\"a[p]\");\n    testSame(\"a[P]\");\n    testSame(\"a[$]\");\n    testSame(\"a[p()]\");\n    testSame(\"a['default']\");\n    testSame(\"a['A\\u0004']\");\n    test(\"a['\\u1d17A']\",\"a['\\u1d17A']\");\n    test(\"a['\\u00d1StuffAfter']\",\"a['\\u00d1StuffAfter']\");\n  }"
+            }
+        ]
+    },
+    "closure_128": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.CodePrinterTest::testIssue942\n\njunit.framework.ComparisonFailure: expected:<var x={[0]:1}> but was:<var x={[\"0\"]:1}>\n\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:107)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:269)\n\n\tat com.google.javascript.jscomp.CodePrinterTest.assertPrint(CodePrinterTest.java:388)\n\n\tat com.google.javascript.jscomp.CodePrinterTest.testIssue942(CodePrinterTest.java:1501)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testIssue942(){\n    assertPrint(\"var x = {0: 1}"
+            }
+        ]
+    },
+    "closure_61": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.PeepholeRemoveDeadCodeTest::testRemoveUselessOps\n\njunit.framework.AssertionFailedError: \n\nExpected: \n\nResult: Math.random()\n\nNode tree inequality:\n\nTree1:\n\nBLOCK [synthetic: 1]\n\n    SCRIPT 1 [sourcename: expected0] [synthetic: 1]\n\n\n\n\n",
+                "test_function": "public void testRemoveUselessOps(){\n    fold(\"Math.random()\",\"\");\n    fold(\"Math.random(f() + g())\",\"f(),g();\");\n    fold(\"Math.random(f(),g(),h())\",\"f(),g(),h();\");\n    foldSame(\"f();\");\n    foldSame(\"(function () {}"
+            }
+        ]
+    },
+    "closure_75": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.PeepholeFoldConstantsTest::testIEString\n\njunit.framework.AssertionFailedError: \n\nExpected: !+\"\\u000b1\"\n\nResult: !1\n\nNode tree inequality:\n\nTree1:\n\nBLOCK [synthetic: 1]\n\n    SCRIPT 1 [sourcename: expected0] [synthetic: 1]\n\n        EXPR_RESULT 1 [sourcename: expected0]\n\n            NOT 1 [sourcename: expected0]\n",
+                "test_function": "public void testIEString(){\n    testSame(\"!+'\\\\v1'\");\n  }"
+            }
+        ]
+    },
+    "closure_153": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.NormalizeTest::testMakeLocalNamesUnique\n\njunit.framework.AssertionFailedError: \n\nExpected: var window\n\nResult: \n\nNode tree inequality:\n\nTree1:\n\nBLOCK [synthetic: 1]\n\n    SCRIPT 1 [sourcename: expected0] [synthetic: 1]\n\n        VAR 1 [sourcename: expected0]\n\n            NAME window 1 [sourcename: expected0]\n",
+                "test_function": "public void testMakeLocalNamesUnique(){\n    if (!Normalize.MAKE_LOCAL_NAMES_UNIQUE) {\n      return;\n    }"
+            }
+        ]
+    },
+    "closure_104": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.rhino.jstype.UnionTypeTest::testGreatestSubtypeUnionTypes5\n\njunit.framework.AssertionFailedError: expected:<NoObject> but was:<None>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:86)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:253)\n\n\tat com.google.javascript.rhino.jstype.UnionTypeTest.testGreatestSubtypeUnionTypes5(UnionTypeTest.java:158)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n",
+                "test_function": "public void testGreatestSubtypeUnionTypes5() throws Exception {\n    JSType errUnion=createUnionType(EVAL_ERROR_TYPE,URI_ERROR_TYPE);\n    assertEquals(NO_OBJECT_TYPE,errUnion.getGreatestSubtype(STRING_OBJECT_TYPE));\n  }"
+            }
+        ]
+    },
+    "closure_76": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.DeadAssignmentsEliminationTest::testIssue384d\n\njunit.framework.AssertionFailedError: \n\nExpected: function FUNC(param1,param2){var a,b;(f(b=true)||f(b=false))&&(a=b);return a}\n\nResult: function FUNC(param1,param2){var a,b;(f(true)||f(b=false))&&(a=b);return a}\n\nNode tree inequality:\n\nTree1:\n\nBLOCK [synthetic: 1]\n\n    SCRIPT 1 [sourcename: expected0] [synthetic: 1]\n\n        FUNCTION  1 [sourcename: expected0]\n\n            NAME FUNC 1 [sourcename: expected0]\n",
+                "test_function": "public void testIssue384d(){\n    inFunction(\" var a, b;\\n\" + \" (f(b = true) || f(b = false)) && (a = b);\\n\" + \" return a;\");\n  }"
+            }
+        ]
+    },
+    "closure_30": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.FlowSensitiveInlineVariablesTest::testIssue698\n\njunit.framework.AssertionFailedError: \n\nExpected: function _func(){var x;unknown.length<2&&(unknown=\"0\"+unknown);x=\"\"+unknown;unknown.length<3&&(unknown=\"0\"+unknown);x=x+unknown;return x}\n\nResult: function _func(){var x;unknown.length<2&&(unknown=\"0\"+unknown);unknown.length<3&&(unknown=\"0\"+unknown);return\"\"+unknown+unknown}\n\nNode tree inequality:\n\nTree1:\n\nBLOCK [synthetic: 1]\n\n    SCRIPT 1 [synthetic: 1] [source_file: expected0] [input_id: InputId: expected0]\n\n        FUNCTION _func 1 [source_file: expected0]\n\n            NAME _func 1 [source_file: expected0]\n",
+                "test_function": "public void testIssue698(){\n    inline(\"var x = ''; \" + \"unknown.length < 2 && (unknown='0' + unknown);\" + \"x = x + unknown; \"+ \"unknown.length < 3 && (unknown='0' + unknown);\"+ \"x = x + unknown; \"+ \"return x;\",\"var x; \" + \"unknown.length < 2 && (unknown='0' + unknown);\" + \"x = '' + unknown; \"+ \"unknown.length < 3 && (unknown='0' + unknown);\"+ \"x = x + unknown; \"+ \"return x;\");\n  }"
+            }
+        ]
+    },
+    "closure_114": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.javascript.jscomp.NameAnalyzerTest::testAssignWithCall\n\njunit.framework.AssertionFailedError: \n\nExpected: var x;(function(){x})()\n\nResult: (function(){x})()\n\nNode tree inequality:\n\nTree1:\n\nBLOCK [synthetic: 1]\n\n    SCRIPT 1 [synthetic: 1] [source_file: expected0] [input_id: InputId: expected0]\n\n        VAR 1 [source_file: expected0]\n\n            NAME x 1 [source_file: expected0]\n",
+                "test_function": "public void testAssignWithCall(){\n    test(\"var fun, x; (fun = function(){ x; }"
+            }
+        ]
+    },
+    "gson_15": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- com.google.gson.stream.JsonWriterTest::testNonFiniteDoublesWhenLenient\n\njava.lang.IllegalArgumentException: Numeric values must be finite, but was NaN\n\n\tat com.google.gson.stream.JsonWriter.value(JsonWriter.java:328)\n\n\tat com.google.gson.stream.JsonWriterTest.testNonFiniteDoublesWhenLenient(JsonWriterTest.java:392)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat junit.framework.TestCase.runTest(TestCase.java:176)\n\n\tat junit.framework.TestCase.runBare(TestCase.java:141)\n",
+                "test_function": "public void testNonFiniteDoublesWhenLenient() throws IOException {\n    StringWriter stringWriter=new StringWriter();\n    JsonWriter jsonWriter=new JsonWriter(stringWriter);\n    jsonWriter.setLenient(true);\n    jsonWriter.beginArray();\n    jsonWriter.value(Double.NaN);\n    jsonWriter.value(Double.NEGATIVE_INFINITY);\n    jsonWriter.value(Double.POSITIVE_INFINITY);\n    jsonWriter.endArray();\n    assertEquals(\"[NaN,-Infinity,Infinity]\",stringWriter.toString());\n  }"
+            }
+        ]
+    },
+    "compress_1": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.compress.archivers.CpioTestCase::testCpioUnarchive_purify_4\n\njava.io.EOFException\n\n\tat org.apache.commons.compress.archivers.cpio.CpioArchiveInputStream.readFully(CpioArchiveInputStream.java:266)\n\n\tat org.apache.commons.compress.archivers.cpio.CpioArchiveInputStream.getNextCPIOEntry(CpioArchiveInputStream.java:89)\n\n\tat org.apache.commons.compress.archivers.cpio.CpioArchiveInputStream.getNextEntry(CpioArchiveInputStream.java:401)\n\n\tat org.apache.commons.compress.archivers.CpioTestCase.testCpioUnarchive_purify_4(CpioTestCase.java:330)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n",
+                "test_function": "public void testCpioUnarchive_purify_4() throws Exception {\n    final File output=new File(dir,\"bla.cpio\");\n{\n      final File file1=getFile(\"test1.xml\");\n      final File file2=getFile(\"test2.xml\");\n      final OutputStream out=new FileOutputStream(output);\n      final ArchiveOutputStream os=new ArchiveStreamFactory().createArchiveOutputStream(\"cpio\",out);\n      os.putArchiveEntry(new CpioArchiveEntry(\"test1.xml\",file1.length()));\n      IOUtils.copy(new FileInputStream(file1),os);\n      os.closeArchiveEntry();\n      os.putArchiveEntry(new CpioArchiveEntry(\"test2.xml\",file2.length()));\n      IOUtils.copy(new FileInputStream(file2),os);\n      os.closeArchiveEntry();\n      os.close();\n      out.close();\n    }"
+            }
+        ]
+    },
+    "compress_8": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.compress.archivers.tar.TarUtilsTest::testRoundTripNames\n\njunit.framework.ComparisonFailure: expected:<...\u00ef\u00bf\u00bdDC\u00ef\u00bf\u00bd\u00ef\u00bf\u00bd\u00ef\u00bf\u00bd04\u00ef\u00bf\u00bd0[60302\u00ef\u00bf\u00bdMOE.model]> but was:<...\u00ef\u00bf\u00bdDC\u00ef\u00bf\u00bd\u00ef\u00bf\u00bd\u00ef\u00bf\u00bd04\u00ef\u00bf\u00bd0[]>\n\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:107)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:269)\n\n\tat org.apache.commons.compress.archivers.tar.TarUtilsTest.checkName(TarUtilsTest.java:206)\n\n\tat org.apache.commons.compress.archivers.tar.TarUtilsTest.testRoundTripNames(TarUtilsTest.java:194)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testRoundTripNames(){\n    checkName(\"\");\n    checkName(\"The quick brown fox\\n\");\n    checkName(\"\\177\");\n    checkName(\"0302-0601-3\ufffd\ufffd\ufffdF06\ufffdW220\ufffdZB\ufffdLALALA\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdCAN\ufffd\ufffdDC\ufffd\ufffd\ufffd04\ufffd060302\ufffdMOE.model\");\n  }"
+            }
+        ]
+    },
+    "compress_3": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.compress.archivers.ArchiveOutputStreamTest::testFinish_purify_5\n\njunit.framework.AssertionFailedError: After putArchive should follow closeArchive\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.TestCase.fail(TestCase.java:227)\n\n\tat org.apache.commons.compress.archivers.ArchiveOutputStreamTest.testFinish_purify_5(ArchiveOutputStreamTest.java:180)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat junit.framework.TestCase.runTest(TestCase.java:176)\n",
+                "test_function": "public void testFinish_purify_5() throws Exception {\n    OutputStream out1=new ByteArrayOutputStream();\n    ArchiveOutputStream aos1=factory.createArchiveOutputStream(\"zip\",out1);\n    aos1.putArchiveEntry(new ZipArchiveEntry(\"dummy\"));\n    aos1=factory.createArchiveOutputStream(\"jar\",out1);\n    aos1.putArchiveEntry(new JarArchiveEntry(\"dummy\"));\n    aos1=factory.createArchiveOutputStream(\"ar\",out1);\n    aos1.putArchiveEntry(new ArArchiveEntry(\"dummy\",100));\n    aos1=factory.createArchiveOutputStream(\"cpio\",out1);\n    aos1.putArchiveEntry(new CpioArchiveEntry(\"dummy\"));\n    aos1=factory.createArchiveOutputStream(\"tar\",out1);\n    aos1.putArchiveEntry(new TarArchiveEntry(\"dummy\"));\n    try {\n      aos1.finish();\n      fail(\"After putArchive should follow closeArchive\");\n    }"
+            }
+        ]
+    },
+    "compress_26": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.compress.utils.IOUtilsTest::skipUsingSkipAndRead\n\njunit.framework.AssertionFailedError: expected:<10> but was:<5>\n\n\tat org.junit.Assert.fail(Assert.java:88)\n\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\n\tat org.junit.Assert.assertEquals(Assert.java:555)\n\n\tat org.junit.Assert.assertEquals(Assert.java:542)\n\n\tat org.apache.commons.compress.utils.IOUtilsTest.skip(IOUtilsTest.java:99)\n\n\tat org.apache.commons.compress.utils.IOUtilsTest.skipUsingSkipAndRead(IOUtilsTest.java:71)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n",
+                "test_function": "public void skipUsingSkipAndRead() throws Exception {\n    skip(new StreamWrapper(){\n      public InputStream wrap(      final InputStream toWrap){\n        return new FilterInputStream(toWrap){\n          boolean skipped;\n          public long skip(          long s) throws IOException {\n            if (!skipped) {\n              toWrap.skip(5);\n              skipped=true;\n              return 5;\n            }"
+            }
+        ]
+    },
+    "compress_44": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.compress.utils.ChecksumCalculatingInputStreamTest::testClassInstantiationWithParameterBeingNullThrowsNullPointerExceptionThree\n\njunit.framework.AssertionFailedError: Expected exception: java.lang.NullPointerException\n\n\tat org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:32)\n\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)\n\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)\n\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)\n\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\n\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\n\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\n\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\n",
+                "test_function": "public void testClassInstantiationWithParameterBeingNullThrowsNullPointerExceptionThree(){\n    ChecksumCalculatingInputStream checksumCalculatingInputStream=new ChecksumCalculatingInputStream(new CRC32(),null);\n  }"
+            }
+        ]
+    },
+    "compress_6": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.compress.archivers.zip.ZipArchiveEntryTest::testNotEquals\n\njunit.framework.AssertionFailedError\n\n\tat junit.framework.Assert.fail(Assert.java:55)\n\n\tat junit.framework.Assert.assertTrue(Assert.java:22)\n\n\tat junit.framework.Assert.assertFalse(Assert.java:39)\n\n\tat junit.framework.Assert.assertFalse(Assert.java:47)\n\n\tat junit.framework.TestCase.assertFalse(TestCase.java:219)\n\n\tat org.apache.commons.compress.archivers.zip.ZipArchiveEntryTest.testNotEquals(ZipArchiveEntryTest.java:245)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n",
+                "test_function": "public void testNotEquals(){\n    ZipArchiveEntry entry1=new ZipArchiveEntry(\"foo\");\n    ZipArchiveEntry entry2=new ZipArchiveEntry(\"bar\");\n    assertFalse(entry1.equals(entry2));\n  }"
+            }
+        ]
+    },
+    "compress_7": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.compress.archivers.tar.TarUtilsTest::testRoundTripNames\n\njunit.framework.ComparisonFailure: expected:<0302-0601-3[\u00ef\u00bf\u00bd\u00ef\u00bf\u00bd\u00ef\u00bf\u00bdF06\u00ef\u00bf\u00bdW220\u00ef\u00bf\u00bdZB\u00ef\u00bf\u00bdLALALA\u00ef\u00bf\u00bd\u00ef\u00bf\u00bd\u00ef\u00bf\u00bd\u00ef\u00bf\u00bd\u00ef\u00bf\u00bd\u00ef\u00bf\u00bd\u00ef\u00bf\u00bd\u00ef\u00bf\u00bd\u00ef\u00bf\u00bd\u00ef\u00bf\u00bdCAN\u00ef\u00bf\u00bd\u00ef\u00bf\u00bdDC\u00ef\u00bf\u00bd\u00ef\u00bf\u00bd\u00ef\u00bf\u00bd04\u00ef\u00bf\u00bd060302\u00ef\u00bf\u00bdMOE.model]> but was:<0302-0601-3[\uffef\uffbf\uffbd\uffef\uffbf\uffbd\uffef\uffbf\uffbdF06\uffef\uffbf\uffbdW220\uffef\uffbf\uffbdZB\uffef\uffbf\uffbdLALALA\uffef\uffbf\uffbd\uffef\uffbf\uffbd\uffef\uffbf\uffbd\uffef\uffbf\uffbd\uffef\uffbf\uffbd\uffef\uffbf\uffbd\uffef\uffbf\uffbd\uffef\uffbf\uffbd\uffef\uffbf\uffbd\uffef\uffbf\uffbdCAN\uffef\uffbf\uffbd\uffef\uffbf\uffbdDC\uffef\uffbf\uffbd\uffef\uffbf\uffbd\uffef\uffbf\uffbd04\uffef\uffbf\uffbd0]>\n\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:107)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:269)\n\n\tat org.apache.commons.compress.archivers.tar.TarUtilsTest.checkName(TarUtilsTest.java:200)\n\n\tat org.apache.commons.compress.archivers.tar.TarUtilsTest.testRoundTripNames(TarUtilsTest.java:188)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testRoundTripNames(){\n    checkName(\"\");\n    checkName(\"The quick brown fox\\n\");\n    checkName(\"\\177\");\n    checkName(\"0302-0601-3\ufffd\ufffd\ufffdF06\ufffdW220\ufffdZB\ufffdLALALA\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdCAN\ufffd\ufffdDC\ufffd\ufffd\ufffd04\ufffd060302\ufffdMOE.model\");\n  }"
+            }
+        ]
+    },
+    "compress_39": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.compress.ArchiveUtilsTest::sanitizeShortensString\n\njunit.framework.AssertionFailedError: expected:<...23456789012345678901[...]> but was:<...23456789012345678901[234567890123456789012345678901234567890123456789]>\n\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\n\tat org.apache.commons.compress.ArchiveUtilsTest.sanitizeShortensString(ArchiveUtilsTest.java:96)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)\n",
+                "test_function": "public void sanitizeShortensString(){\n    String input=\"012345678901234567890123456789012345678901234567890123456789\" + \"012345678901234567890123456789012345678901234567890123456789\" + \"012345678901234567890123456789012345678901234567890123456789\"+ \"012345678901234567890123456789012345678901234567890123456789\"+ \"012345678901234567890123456789012345678901234567890123456789\";\n    String expected=\"012345678901234567890123456789012345678901234567890123456789\" + \"012345678901234567890123456789012345678901234567890123456789\" + \"012345678901234567890123456789012345678901234567890123456789\"+ \"012345678901234567890123456789012345678901234567890123456789\"+ \"012345678901...\";\n    assertEquals(expected,ArchiveUtils.sanitize(input));\n  }"
+            }
+        ]
+    },
+    "math_48": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.analysis.solvers.RegulaFalsiSolverTest::testIssue631\n\njava.lang.Exception: Unexpected exception, expected<org.apache.commons.math.exception.ConvergenceException> but was<org.apache.commons.math.exception.TooManyEvaluationsException>\n\n\tat org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:28)\n\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)\n\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)\n\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)\n\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\n\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\n\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\n\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\n",
+                "test_function": "public void testIssue631(){\n    final UnivariateRealFunction f=new UnivariateRealFunction(){\n      /** \n * {@inheritDoc}"
+            }
+        ]
+    },
+    "math_45": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.linear.OpenMapRealMatrixTest::testMath679\n\njunit.framework.AssertionFailedError: Expected exception: org.apache.commons.math.exception.NumberIsTooLargeException\n\n\tat org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:32)\n\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)\n\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)\n\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)\n\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\n\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\n\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\n\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\n",
+                "test_function": "public void testMath679(){\n    new OpenMapRealMatrix(3,Integer.MAX_VALUE);\n  }"
+            }
+        ]
+    },
+    "math_75": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.stat.FrequencyTest::testPcts_purify_9\n\njunit.framework.AssertionFailedError: three (Object) pct expected:<0.5> but was:<1.0>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:120)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:279)\n\n\tat org.apache.commons.math.stat.FrequencyTest.testPcts_purify_9(FrequencyTest.java:559)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testPcts_purify_9(){\n    f.addValue(oneL);\n    f.addValue(twoL);\n    f.addValue(oneI);\n    f.addValue(twoI);\n    f.addValue(threeL);\n    f.addValue(threeL);\n    f.addValue(3);\n    f.addValue(threeI);\n    assertEquals(\"three (Object) pct\",0.5,f.getPct((Object)(Integer.valueOf(3))),tolerance);\n  }"
+            }
+        ]
+    },
+    "math_104": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.special.GammaTest::testRegularizedGammaPositivePositive\n\njunit.framework.AssertionFailedError: expected:<0.632120558828558> but was:<0.6321205587649603>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:120)\n\n\tat org.apache.commons.math.TestUtils.assertEquals(TestUtils.java:62)\n\n\tat org.apache.commons.math.TestUtils.assertEquals(TestUtils.java:49)\n\n\tat org.apache.commons.math.special.GammaTest.testRegularizedGamma(GammaTest.java:20)\n\n\tat org.apache.commons.math.special.GammaTest.testRegularizedGammaPositivePositive(GammaTest.java:142)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n",
+                "test_function": "public void testRegularizedGammaPositivePositive(){\n    testRegularizedGamma(0.632120558828558,1.0,1.0);\n  }"
+            }
+        ]
+    },
+    "math_103": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.distribution.NormalDistributionTest::testExtremeValues\n\norg.apache.commons.math.MaxIterationsExceededException: Maximal number of iterations (10,000) exceeded\n\n\tat org.apache.commons.math.special.Gamma.regularizedGammaP(Gamma.java:124)\n\n\tat org.apache.commons.math.special.Erf.erf(Erf.java:27)\n\n\tat org.apache.commons.math.distribution.NormalDistributionImpl.cumulativeProbability(NormalDistributionImpl.java:83)\n\n\tat org.apache.commons.math.distribution.NormalDistributionTest.testExtremeValues(NormalDistributionTest.java:187)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n",
+                "test_function": "public void testExtremeValues() throws Exception {\n    NormalDistribution distribution=(NormalDistribution)getDistribution();\n    distribution.setMean(0);\n    distribution.setStandardDeviation(1);\n    for (int i=0; i < 100; i+=5) {\n      double lowerTail=distribution.cumulativeProbability((double)-i);\n      double upperTail=distribution.cumulativeProbability((double)i);\n      if (i < 10) {\n        assertTrue(lowerTail > 0.0d);\n        assertTrue(upperTail < 1.0d);\n      }"
+            }
+        ]
+    },
+    "math_28": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math3.optimization.linear.SimplexSolverTest::testMath828Cycle_purify_2\n\norg.apache.commons.math3.exception.MaxCountExceededException: illegal state: maximal count (100) exceeded\n\n\tat org.apache.commons.math3.optimization.linear.AbstractLinearOptimizer.incrementIterationsCounter(AbstractLinearOptimizer.java:108)\n\n\tat org.apache.commons.math3.optimization.linear.SimplexSolver.doIteration(SimplexSolver.java:173)\n\n\tat org.apache.commons.math3.optimization.linear.SimplexSolver.doOptimize(SimplexSolver.java:235)\n\n\tat org.apache.commons.math3.optimization.linear.AbstractLinearOptimizer.optimize(AbstractLinearOptimizer.java:126)\n\n\tat org.apache.commons.math3.optimization.linear.SimplexSolverTest.testMath828Cycle_purify_2(SimplexSolverTest.java:906)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testMath828Cycle_purify_2(){\nLinearObjectiveFunction f=new LinearObjectiveFunction(new double[]{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}"
+            }
+        ]
+    },
+    "math_42": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.optimization.linear.SimplexSolverTest::testMath713NegativeVariable_purify_2\n\njunit.framework.AssertionFailedError\n\n\tat org.junit.Assert.fail(Assert.java:86)\n\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\n\tat org.junit.Assert.assertTrue(Assert.java:52)\n\n\tat org.apache.commons.math.optimization.linear.SimplexSolverTest.testMath713NegativeVariable_purify_2(SimplexSolverTest.java:771)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n",
+                "test_function": "public void testMath713NegativeVariable_purify_2(){\n    LinearObjectiveFunction f=new LinearObjectiveFunction(new double[]{1.0,1.0}"
+            }
+        ]
+    },
+    "math_14": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math3.fitting.PolynomialFitterTest::testLargeSample_purify_2\n\njunit.framework.AssertionFailedError\n\n\tat org.junit.Assert.fail(Assert.java:86)\n\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\n\tat org.junit.Assert.assertTrue(Assert.java:52)\n\n\tat org.apache.commons.math3.fitting.PolynomialFitterTest.testLargeSample_purify_2(PolynomialFitterTest.java:365)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n",
+                "test_function": "public void testLargeSample_purify_2(){\n    Random randomizer=new Random(0x5551480dca5b369bl);\n    double maxError=0;\n    Assert.assertTrue(maxError > 0.001);\n  }"
+            }
+        ]
+    },
+    "math_60": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.distribution.NormalDistributionTest::testExtremeValues_purify_5\n\norg.apache.commons.math.ConvergenceException: Continued fraction diverged to NaN for value \u221e\n\n\tat org.apache.commons.math.util.ContinuedFraction.evaluate(ContinuedFraction.java:160)\n\n\tat org.apache.commons.math.special.Gamma.regularizedGammaQ(Gamma.java:192)\n\n\tat org.apache.commons.math.special.Gamma.regularizedGammaP(Gamma.java:101)\n\n\tat org.apache.commons.math.special.Erf.erf(Erf.java:22)\n\n\tat org.apache.commons.math.distribution.NormalDistributionImpl.cumulativeProbability(NormalDistributionImpl.java:106)\n\n\tat org.apache.commons.math.distribution.NormalDistributionTest.testExtremeValues_purify_5(NormalDistributionTest.java:326)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n",
+                "test_function": "public void testExtremeValues_purify_5() throws Exception {\n    NormalDistribution distribution=new NormalDistributionImpl(0,1);\n    assertEquals(distribution.cumulativeProbability(Double.NEGATIVE_INFINITY),0,0);\n  }"
+            }
+        ]
+    },
+    "math_23": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math3.optimization.univariate.BrentOptimizerTest::testKeepInitIfBest\n\njunit.framework.AssertionFailedError: Best point not reported\n\n\tat org.junit.Assert.fail(Assert.java:88)\n\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\n\tat org.apache.commons.math3.optimization.univariate.BrentOptimizerTest.testKeepInitIfBest(BrentOptimizerTest.java:279)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)\n",
+                "test_function": "public void testKeepInitIfBest(){\n    final double minSin=3 * Math.PI / 2;\n    final double offset=1e-8;\n    final double delta=1e-7;\n    final UnivariateFunction f1=new Sin();\n    final UnivariateFunction f2=new StepFunction(new double[]{minSin,minSin + offset,minSin + 2 * offset}"
+            }
+        ]
+    },
+    "math_3": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math3.util.MathArraysTest::testLinearCombinationWithSingleElementArray\n\njava.lang.ArrayIndexOutOfBoundsException: 1\n\n\tat org.apache.commons.math3.util.MathArrays.linearCombination(MathArrays.java:644)\n\n\tat org.apache.commons.math3.util.MathArraysTest.testLinearCombinationWithSingleElementArray(MathArraysTest.java:861)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)\n\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n",
+                "test_function": "public void testLinearCombinationWithSingleElementArray(){\n    final double[] a={1.23456789}"
+            }
+        ]
+    },
+    "math_64": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.optimization.general.MinpackTest::testMinpackFreudensteinRoth\n\njunit.framework.AssertionFailedError: expected:<11.41300466147456> but was:<11.4121122022341>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:120)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:129)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:288)\n\n\tat org.apache.commons.math.optimization.general.MinpackTest$MinpackFunction.checkTheoreticalMinParams(MinpackTest.java:437)\n\n\tat org.apache.commons.math.optimization.general.MinpackTest.minpackTest(MinpackTest.java:377)\n\n\tat org.apache.commons.math.optimization.general.MinpackTest.testMinpackFreudensteinRoth(MinpackTest.java:144)\n",
+                "test_function": "public void testMinpackFreudensteinRoth(){\n    minpackTest(new FreudensteinRothFunction(new double[]{0.5,-2.0}"
+            }
+        ]
+    },
+    "math_55": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.geometry.Vector3DTest::testCrossProductCancellation\n\njunit.framework.AssertionFailedError: expected:<1.0> but was:<0.0>\n\n\tat org.junit.Assert.fail(Assert.java:88)\n\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\n\tat org.junit.Assert.assertEquals(Assert.java:494)\n\n\tat org.junit.Assert.assertEquals(Assert.java:592)\n\n\tat org.apache.commons.math.geometry.Vector3DTest.checkVector(Vector3DTest.java:429)\n\n\tat org.apache.commons.math.geometry.Vector3DTest.testCrossProductCancellation(Vector3DTest.java:287)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n",
+                "test_function": "public void testCrossProductCancellation(){\n    Vector3D v1=new Vector3D(9070467121.0,4535233560.0,1);\n    Vector3D v2=new Vector3D(9070467123.0,4535233561.0,1);\n    checkVector(Vector3D.crossProduct(v1,v2),-1,2,1);\n    double scale=FastMath.scalb(1.0,100);\n    Vector3D big1=new Vector3D(scale,v1);\n    Vector3D small2=new Vector3D(1 / scale,v2);\n    checkVector(Vector3D.crossProduct(big1,small2),-1,2,1);\n  }"
+            }
+        ]
+    },
+    "math_26": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math3.fraction.FractionTest::testIntegerOverflow\n\njunit.framework.AssertionFailedError: an exception should have been thrown\n\n\tat org.junit.Assert.fail(Assert.java:88)\n\n\tat org.apache.commons.math3.fraction.FractionTest.checkIntegerOverflow(FractionTest.java:181)\n\n\tat org.apache.commons.math3.fraction.FractionTest.testIntegerOverflow(FractionTest.java:167)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)\n",
+                "test_function": "public void testIntegerOverflow(){\n    checkIntegerOverflow(0.75000000001455192);\n    checkIntegerOverflow(1.0e10);\n    checkIntegerOverflow(-1.0e10);\n    checkIntegerOverflow(-43979.60679604749);\n  }"
+            }
+        ]
+    },
+    "math_50": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.analysis.solvers.RegulaFalsiSolverTest::testIssue631\n\njunit.framework.AssertionFailedError: Expected exception: org.apache.commons.math.exception.TooManyEvaluationsException\n\n\tat org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:32)\n\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)\n\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)\n\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)\n\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\n\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\n\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\n\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\n",
+                "test_function": "public void testIssue631(){\n    final UnivariateRealFunction f=new UnivariateRealFunction(){\n      /** \n * {@inheritDoc}"
+            }
+        ]
+    },
+    "math_10": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest::testAtan2SpecialCases_purify_4\n\njunit.framework.AssertionFailedError: expected:<0.0> but was:<NaN>\n\n\tat org.junit.Assert.fail(Assert.java:88)\n\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\n\tat org.junit.Assert.assertEquals(Assert.java:494)\n\n\tat org.junit.Assert.assertEquals(Assert.java:592)\n\n\tat org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest.testAtan2SpecialCases_purify_4(DerivativeStructureTest.java:2009)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testAtan2SpecialCases_purify_4(){\nDerivativeStructure pp=DerivativeStructure.atan2(new DerivativeStructure(2,2,1,+0.0),new DerivativeStructure(2,2,1,+0.0));\nDerivativeStructure pn=DerivativeStructure.atan2(new DerivativeStructure(2,2,1,+0.0),new DerivativeStructure(2,2,1,-0.0));\nDerivativeStructure np=DerivativeStructure.atan2(new DerivativeStructure(2,2,1,-0.0),new DerivativeStructure(2,2,1,+0.0));\nAssert.assertEquals(0,np.getValue(),1.0e-15);\n}"
+            }
+        ]
+    },
+    "math_25": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math3.optimization.fitting.HarmonicFitterTest::testMath844\n\njunit.framework.AssertionFailedError: Expected exception: org.apache.commons.math3.exception.MathIllegalStateException\n\n\tat org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:32)\n\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)\n\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)\n\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)\n\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\n\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\n\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\n\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\n",
+                "test_function": "public void testMath844(){\n    final double[] y={0,1,2,3,2,1,0,-1,-2,-3,-2,-1,0,1,2,3,2,1,0,-1,-2,-3,-2,-1,0,1,2,3,2,1,0}"
+            }
+        ]
+    },
+    "math_15": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math3.util.FastMathTest::testMath904_purify_2\n\njunit.framework.AssertionFailedError: expected:<-1.0> but was:<1.0>\n\n\tat org.junit.Assert.fail(Assert.java:88)\n\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\n\tat org.junit.Assert.assertEquals(Assert.java:494)\n\n\tat org.junit.Assert.assertEquals(Assert.java:592)\n\n\tat org.apache.commons.math3.util.FastMathTest.testMath904_purify_2(FastMathTest.java:1398)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testMath904_purify_2(){\n    final double x=-1;\n    final double y=(5 + 1e-15) * 1e15;\n    Assert.assertEquals(Math.pow(x,-y),FastMath.pow(x,-y),0);\n  }"
+            }
+        ]
+    },
+    "math_17": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math3.dfp.DfpTest::testMultiply\n\njunit.framework.AssertionFailedError: assersion failed Multiply #37 x = NaN flags = 1\n\n\tat org.junit.Assert.fail(Assert.java:88)\n\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\n\tat org.apache.commons.math3.dfp.DfpTest.test(DfpTest.java:37)\n\n\tat org.apache.commons.math3.dfp.DfpTest.testMultiply(DfpTest.java:531)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n",
+                "test_function": "public void testMultiply(){\n    test(field.newDfp(\"1\").multiply(field.newDfp(\"1\")),field.newDfp(\"1\"),0,\"Multiply #1\");\n    test(field.newDfp(\"1\").multiply(1),field.newDfp(\"1\"),0,\"Multiply #2\");\n    test(field.newDfp(\"-1\").multiply(field.newDfp(\"1\")),field.newDfp(\"-1\"),0,\"Multiply #3\");\n    test(field.newDfp(\"-1\").multiply(1),field.newDfp(\"-1\"),0,\"Multiply #4\");\n    test(field.newDfp(\"2\").multiply(field.newDfp(\"3\")),field.newDfp(\"6\"),0,\"Multiply #5\");\n    test(field.newDfp(\"2\").multiply(3),field.newDfp(\"6\"),0,\"Multiply #6\");\n    test(field.newDfp(\"-2\").multiply(field.newDfp(\"3\")),field.newDfp(\"-6\"),0,\"Multiply #7\");\n    test(field.newDfp(\"-2\").multiply(3),field.newDfp(\"-6\"),0,\"Multiply #8\");\n    test(field.newDfp(\"2\").multiply(field.newDfp(\"-3\")),field.newDfp(\"-6\"),0,\"Multiply #9\");\n    test(field.newDfp(\"-2\").multiply(field.newDfp(\"-3\")),field.newDfp(\"6\"),0,\"Multiply #10\");\n    test(field.newDfp(\"-2\").multiply(field.newDfp(\"0\")),field.newDfp(\"-0\"),0,\"Multiply #11\");\n    test(field.newDfp(\"-2\").multiply(0),field.newDfp(\"-0\"),0,\"Multiply #12\");\n    test(field.newDfp(\"2\").multiply(field.newDfp(\"0\")),field.newDfp(\"0\"),0,\"Multiply #13\");\n    test(field.newDfp(\"2\").multiply(0),field.newDfp(\"0\"),0,\"Multiply #14\");\n    test(field.newDfp(\"2\").multiply(pinf),pinf,0,\"Multiply #15\");\n    test(field.newDfp(\"2\").multiply(ninf),ninf,0,\"Multiply #16\");\n    test(field.newDfp(\"-2\").multiply(pinf),ninf,0,\"Multiply #17\");\n    test(field.newDfp(\"-2\").multiply(ninf),pinf,0,\"Multiply #18\");\n    test(ninf.multiply(field.newDfp(\"-2\")),pinf,0,\"Multiply #18.1\");\n    test(field.newDfp(\"5e131071\").multiply(2),pinf,DfpField.FLAG_OVERFLOW,\"Multiply #19\");\n    test(field.newDfp(\"5e131071\").multiply(field.newDfp(\"1.999999999999999\")),field.newDfp(\"9.9999999999999950000e131071\"),0,\"Multiply #20\");\n    test(field.newDfp(\"-5e131071\").multiply(2),ninf,DfpField.FLAG_OVERFLOW,\"Multiply #22\");\n    test(field.newDfp(\"-5e131071\").multiply(field.newDfp(\"1.999999999999999\")),field.newDfp(\"-9.9999999999999950000e131071\"),0,\"Multiply #23\");\n    test(field.newDfp(\"1e-65539\").multiply(field.newDfp(\"1e-65539\")),field.newDfp(\"1e-131078\"),DfpField.FLAG_UNDERFLOW,\"Multiply #24\");\n    test(field.newDfp(\"1\").multiply(nan),nan,0,\"Multiply #25\");\n    test(nan.multiply(field.newDfp(\"1\")),nan,0,\"Multiply #26\");\n    test(nan.multiply(pinf),nan,0,\"Multiply #27\");\n    test(pinf.multiply(nan),nan,0,\"Multiply #27\");\n    test(pinf.multiply(field.newDfp(\"0\")),nan,DfpField.FLAG_INVALID,\"Multiply #28\");\n    test(field.newDfp(\"0\").multiply(pinf),nan,DfpField.FLAG_INVALID,\"Multiply #29\");\n    test(pinf.multiply(pinf),pinf,0,\"Multiply #30\");\n    test(ninf.multiply(pinf),ninf,0,\"Multiply #31\");\n    test(pinf.multiply(ninf),ninf,0,\"Multiply #32\");\n    test(ninf.multiply(ninf),pinf,0,\"Multiply #33\");\n    test(pinf.multiply(1),pinf,0,\"Multiply #34\");\n    test(pinf.multiply(0),nan,DfpField.FLAG_INVALID,\"Multiply #35\");\n    test(nan.multiply(1),nan,0,\"Multiply #36\");\n    test(field.newDfp(\"1\").multiply(10000),field.newDfp(\"10000\"),0,\"Multiply #37\");\n    test(field.newDfp(\"2\").multiply(1000000),field.newDfp(\"2000000\"),0,\"Multiply #38\");\n    test(field.newDfp(\"1\").multiply(-1),field.newDfp(\"-1\"),0,\"Multiply #39\");\n  }"
+            }
+        ]
+    },
+    "math_96": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.complex.ComplexTest::testMath221\n\njunit.framework.AssertionFailedError: expected:<org.apache.commons.math.complex.Complex@98b00000> but was:<org.apache.commons.math.complex.Complex@18b00000>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:86)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:253)\n\n\tat org.apache.commons.math.complex.ComplexTest.testMath221(ComplexTest.java:1721)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n",
+                "test_function": "public void testMath221(){\n    assertEquals(new Complex(0,-1),new Complex(0,1).multiply(new Complex(-1,0)));\n  }"
+            }
+        ]
+    },
+    "math_94": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.util.MathUtilsTest::testGcd_purify_1\n\njunit.framework.AssertionFailedError: expected:<98304> but was:<3440640>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:234)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:241)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:409)\n\n\tat org.apache.commons.math.util.MathUtilsTest.testGcd_purify_1(MathUtilsTest.java:1267)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n",
+                "test_function": "public void testGcd_purify_1(){\n    int a=30;\n    int b=50;\n    int c=77;\n    assertEquals(3 * (1 << 15),MathUtils.gcd(3 * (1 << 20),9 * (1 << 15)));\n  }"
+            }
+        ]
+    },
+    "math_97": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.analysis.BrentSolverTest::testRootEndpoints_purify_2\n\njava.lang.IllegalArgumentException: Function values at endpoints do not have different signs.  Endpoints: [3.0,3.141592653589793]  Values: [0.1411200080598672,1.2246467991473532E-16]\n\n\tat org.apache.commons.math.analysis.BrentSolver.solve(BrentSolver.java:83)\n\n\tat org.apache.commons.math.analysis.BrentSolverTest.testRootEndpoints_purify_2(BrentSolverTest.java:286)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat junit.framework.TestCase.runTest(TestCase.java:176)\n\n\tat junit.framework.TestCase.runBare(TestCase.java:141)\n",
+                "test_function": "public void testRootEndpoints_purify_2() throws Exception {\n    UnivariateRealFunction f=new SinFunction();\n    UnivariateRealSolver solver=new BrentSolver(f);\n    double result=solver.solve(Math.PI,4);\n    result=solver.solve(3,Math.PI);\n    assertEquals(result,Math.PI,solver.getAbsoluteAccuracy());\n  }"
+            }
+        ]
+    },
+    "math_2": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math3.distribution.HypergeometricDistributionTest::testMath1021\n\njunit.framework.AssertionFailedError: sample=-49\n\n\tat org.junit.Assert.fail(Assert.java:88)\n\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\n\tat org.apache.commons.math3.distribution.HypergeometricDistributionTest.testMath1021(HypergeometricDistributionTest.java:345)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)\n",
+                "test_function": "public void testMath1021(){\n    final int N=43130568;\n    final int m=42976365;\n    final int n=50;\n    final HypergeometricDistribution dist=new HypergeometricDistribution(N,m,n);\n    for (int i=0; i < 100; i++) {\n      final int sample=dist.sample();\n      Assert.assertTrue(\"sample=\" + sample,0 <= sample);\n      Assert.assertTrue(\"sample=\" + sample,sample <= n);\n    }"
+            }
+        ]
+    },
+    "math_35": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math3.genetics.ElitisticListPopulationTest::testChromosomeListConstructorTooHigh\n\njunit.framework.AssertionFailedError: Expected exception: org.apache.commons.math3.exception.OutOfRangeException\n\n\tat org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:32)\n\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)\n\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)\n\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)\n\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\n\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\n\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\n\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\n",
+                "test_function": "public void testChromosomeListConstructorTooHigh(){\n    final List<Chromosome> chromosomes=Collections.emptyList();\n    final double rate=1.25;\n    new ElitisticListPopulation(chromosomes,100,rate);\n  }"
+            }
+        ]
+    },
+    "math_53": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.complex.ComplexTest::testAddNaN_purify_2\n\njunit.framework.AssertionFailedError\n\n\tat org.junit.Assert.fail(Assert.java:86)\n\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\n\tat org.junit.Assert.assertTrue(Assert.java:52)\n\n\tat org.apache.commons.math.complex.ComplexTest.testAddNaN_purify_2(ComplexTest.java:2159)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n",
+                "test_function": "public void testAddNaN_purify_2(){\n    Complex x=new Complex(3.0,4.0);\n    Complex z=x.add(Complex.NaN);\n    z=new Complex(1,nan);\n    Complex w=x.add(z);\n    Assert.assertTrue(Double.isNaN(w.getReal()));\n  }"
+            }
+        ]
+    },
+    "math_79": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererTest::testPerformClusterAnalysisDegenerate_purify_4\n\njava.lang.NullPointerException\n\n\tat org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer.assignPointsToClusters(KMeansPlusPlusClusterer.java:83)\n\n\tat org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer.cluster(KMeansPlusPlusClusterer.java:37)\n\n\tat org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererTest.testPerformClusterAnalysisDegenerate_purify_4(KMeansPlusPlusClustererTest.java:164)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)\n",
+                "test_function": "public void testPerformClusterAnalysisDegenerate_purify_4(){\n    KMeansPlusPlusClusterer<EuclideanIntegerPoint> transformer=new KMeansPlusPlusClusterer<EuclideanIntegerPoint>(new Random(1746432956321l));\n    EuclideanIntegerPoint[] points=new EuclideanIntegerPoint[]{new EuclideanIntegerPoint(new int[]{1959,325100}"
+            }
+        ]
+    },
+    "math_101": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.complex.FrenchComplexFormatTest::testForgottenImaginaryCharacter\n\njava.lang.StringIndexOutOfBoundsException: String index out of range: 6\n\n\tat java.lang.String.substring(String.java:1963)\n\n\tat org.apache.commons.math.complex.ComplexFormat.parse(ComplexFormat.java:311)\n\n\tat org.apache.commons.math.complex.ComplexFormatAbstractTest.testForgottenImaginaryCharacter(ComplexFormatAbstractTest.java:355)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat junit.framework.TestCase.runTest(TestCase.java:176)\n",
+                "test_function": ""
+            }
+        ]
+    },
+    "math_106": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.fraction.FractionFormatTest::testParseProperInvalidMinus_purify_2\n\njunit.framework.AssertionFailedError: invalid minus in improper fraction.\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.TestCase.fail(TestCase.java:227)\n\n\tat org.apache.commons.math.fraction.FractionFormatTest.testParseProperInvalidMinus_purify_2(FractionFormatTest.java:489)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat junit.framework.TestCase.runTest(TestCase.java:176)\n",
+                "test_function": "public void testParseProperInvalidMinus_purify_2(){\n    String source=\"2 -2 / 3\";\n    source=\"2 2 / -3\";\n    try {\n      Fraction c=properFormat.parse(source);\n      fail(\"invalid minus in improper fraction.\");\n    }"
+            }
+        ]
+    },
+    "math_54": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.dfp.DfpTest::testIssue567_purify_4\n\njunit.framework.AssertionFailedError: expected:<1.0> but was:<-1.0>\n\n\tat org.junit.Assert.fail(Assert.java:88)\n\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\n\tat org.junit.Assert.assertEquals(Assert.java:494)\n\n\tat org.junit.Assert.assertEquals(Assert.java:592)\n\n\tat org.apache.commons.math.dfp.DfpTest.testIssue567_purify_4(DfpTest.java:1023)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testIssue567_purify_4(){\n    DfpField field=new DfpField(100);\n    Assert.assertEquals(+1,FastMath.copySign(1,field.newDfp(+0.0).toDouble()),MathUtils.EPSILON);\n  }"
+            }
+        ]
+    },
+    "math_24": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math3.optimization.univariate.BrentOptimizerTest::testMath855\n\njunit.framework.AssertionFailedError: Best point not reported\n\n\tat org.junit.Assert.fail(Assert.java:88)\n\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\n\tat org.apache.commons.math3.optimization.univariate.BrentOptimizerTest.testMath855(BrentOptimizerTest.java:275)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)\n",
+                "test_function": "public void testMath855(){\n    final double minSin=3 * Math.PI / 2;\n    final double offset=1e-8;\n    final double delta=1e-7;\n    final UnivariateFunction f1=new Sin();\n    final UnivariateFunction f2=new StepFunction(new double[]{minSin,minSin + offset,minSin + 5 * offset}"
+            }
+        ]
+    },
+    "math_105": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.stat.regression.SimpleRegressionTest::testSSENonNegative\n\njunit.framework.AssertionFailedError\n\n\tat junit.framework.Assert.fail(Assert.java:55)\n\n\tat junit.framework.Assert.assertTrue(Assert.java:22)\n\n\tat junit.framework.Assert.assertTrue(Assert.java:31)\n\n\tat junit.framework.TestCase.assertTrue(TestCase.java:201)\n\n\tat org.apache.commons.math.stat.regression.SimpleRegressionTest.testSSENonNegative(SimpleRegressionTest.java:287)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testSSENonNegative(){\n    double[] y={8915.102,8919.302,8923.502}"
+            }
+        ]
+    },
+    "math_93": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.util.MathUtilsTest::testFactorial_purify_1\n\njunit.framework.AssertionFailedError: 17!  expected:<3.55687428096E14> but was:<3.55687428096001E14>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:120)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:279)\n\n\tat org.apache.commons.math.util.MathUtilsTest.testFactorial_purify_1(MathUtilsTest.java:1274)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testFactorial_purify_1(){\n    for (int i=1; i < 21; i++) {\n      assertEquals(i + \"! \",factorial(i),MathUtils.factorial(i));\n      assertEquals(i + \"! \",(double)factorial(i),MathUtils.factorialDouble(i),Double.MIN_VALUE);\n      assertEquals(i + \"! \",Math.log((double)factorial(i)),MathUtils.factorialLog(i),10E-12);\n    }"
+            }
+        ]
+    },
+    "math_87": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.optimization.linear.SimplexSolverTest::testSingleVariableAndConstraint_purify_2\n\njunit.framework.AssertionFailedError: expected:<30.0> but was:<0.0>\n\n\tat org.junit.Assert.fail(Assert.java:88)\n\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\n\tat org.junit.Assert.assertEquals(Assert.java:494)\n\n\tat org.junit.Assert.assertEquals(Assert.java:592)\n\n\tat org.apache.commons.math.optimization.linear.SimplexSolverTest.testSingleVariableAndConstraint_purify_2(SimplexSolverTest.java:475)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testSingleVariableAndConstraint_purify_2() throws OptimizationException {\n    LinearObjectiveFunction f=new LinearObjectiveFunction(new double[]{3}"
+            }
+        ]
+    },
+    "math_92": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.util.MathUtilsTest::testBinomialCoefficientLarge_purify_5\n\njunit.framework.AssertionFailedError: expected:<35982002000> but was:<35982002001>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:159)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:166)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:324)\n\n\tat org.apache.commons.math.util.MathUtilsTest.testBinomialCoefficientLarge_purify_5(MathUtilsTest.java:1462)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n",
+                "test_function": "public void testBinomialCoefficientLarge_purify_5() throws Exception {\n    long ourResult=MathUtils.binomialCoefficient(300,3);\n    long exactResult=binomialCoefficient(300,3);\n    ourResult=MathUtils.binomialCoefficient(700,697);\n    exactResult=binomialCoefficient(700,697);\n    for (int i=2000; i <= 10000; i+=2000) {\n      ourResult=MathUtils.binomialCoefficient(i,3);\n      exactResult=binomialCoefficient(i,3);\n      assertEquals(exactResult,ourResult);\n    }"
+            }
+        ]
+    },
+    "math_63": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.util.MathUtilsTest::testArrayEquals_purify_7\n\njunit.framework.AssertionFailedError\n\n\tat junit.framework.Assert.fail(Assert.java:55)\n\n\tat junit.framework.Assert.assertTrue(Assert.java:22)\n\n\tat junit.framework.Assert.assertFalse(Assert.java:39)\n\n\tat junit.framework.Assert.assertFalse(Assert.java:47)\n\n\tat junit.framework.TestCase.assertFalse(TestCase.java:219)\n\n\tat org.apache.commons.math.util.MathUtilsTest.testArrayEquals_purify_7(MathUtilsTest.java:2142)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n",
+                "test_function": "public void testArrayEquals_purify_7(){\n    assertFalse(MathUtils.equals(new double[]{Double.NaN}"
+            }
+        ]
+    },
+    "math_70": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.analysis.solvers.BisectionSolverTest::testMath369\n\njava.lang.NullPointerException\n\n\tat org.apache.commons.math.analysis.solvers.BisectionSolver.solve(BisectionSolver.java:66)\n\n\tat org.apache.commons.math.analysis.solvers.BisectionSolver.solve(BisectionSolver.java:36)\n\n\tat org.apache.commons.math.analysis.solvers.BisectionSolver.solve(BisectionSolver.java:43)\n\n\tat org.apache.commons.math.analysis.solvers.BisectionSolverTest.testMath369(BisectionSolverTest.java:113)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n",
+                "test_function": "public void testMath369() throws Exception {\n    UnivariateRealFunction f=new SinFunction();\n    UnivariateRealSolver solver=new BisectionSolver();\n    assertEquals(Math.PI,solver.solve(f,3.0,3.2,3.1),solver.getAbsoluteAccuracy());\n  }"
+            }
+        ]
+    },
+    "math_46": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.complex.ComplexTest::testDivideZero\n\njunit.framework.AssertionFailedError: expected:<(Infinity, Infinity)> but was:<(NaN, NaN)>\n\n\tat org.junit.Assert.fail(Assert.java:88)\n\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\n\tat org.apache.commons.math.complex.ComplexTest.testDivideZero(ComplexTest.java:423)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testDivideZero(){\n    Complex x=new Complex(3.0,4.0);\n    Complex z=x.divide(Complex.ZERO);\n    Assert.assertEquals(z,Complex.NaN);\n  }"
+            }
+        ]
+    },
+    "math_88": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.optimization.linear.SimplexSolverTest::testMath272_purify_3\n\njunit.framework.AssertionFailedError: expected:<1.0> but was:<0.0>\n\n\tat org.junit.Assert.fail(Assert.java:88)\n\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\n\tat org.junit.Assert.assertEquals(Assert.java:494)\n\n\tat org.junit.Assert.assertEquals(Assert.java:592)\n\n\tat org.apache.commons.math.optimization.linear.SimplexSolverTest.testMath272_purify_3(SimplexSolverTest.java:472)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testMath272_purify_3() throws OptimizationException {\n    LinearObjectiveFunction f=new LinearObjectiveFunction(new double[]{2,2,1}"
+            }
+        ]
+    },
+    "math_89": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.math.stat.FrequencyTest::testAddNonComparable_purify_2\n\njava.lang.ClassCastException: java.lang.Object cannot be cast to java.lang.Comparable\n\n\tat org.apache.commons.math.stat.Frequency.addValue(Frequency.java:63)\n\n\tat org.apache.commons.math.stat.FrequencyTest.testAddNonComparable_purify_2(FrequencyTest.java:357)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat junit.framework.TestCase.runTest(TestCase.java:176)\n\n\tat junit.framework.TestCase.runBare(TestCase.java:141)\n",
+                "test_function": "public void testAddNonComparable_purify_2(){\n    f.clear();\n    f.addValue(1);\n    try {\n      f.addValue(new Object());\n      fail(\"Expected IllegalArgumentException\");\n    }"
+            }
+        ]
+    },
+    "lang_64": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang.enums.ValuedEnumTest::testCompareTo_otherEnumType\n\njunit.framework.AssertionFailedError\n\n\tat junit.framework.Assert.fail(Assert.java:55)\n\n\tat junit.framework.Assert.fail(Assert.java:64)\n\n\tat junit.framework.TestCase.fail(TestCase.java:235)\n\n\tat org.apache.commons.lang.enums.ValuedEnumTest.testCompareTo_otherEnumType(ValuedEnumTest.java:171)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n",
+                "test_function": "public void testCompareTo_otherEnumType(){\n    try {\n      ValuedColorEnum.BLUE.compareTo(ValuedLanguageEnum.ENGLISH);\n      fail();\n    }"
+            }
+        ]
+    },
+    "lang_31": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang3.StringUtilsEqualsIndexOfTest::testContainsAnyCharArrayWithSupplementaryChars_purify_8\n\njunit.framework.AssertionFailedError: expected:<false> but was:<true>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:174)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:181)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:341)\n\n\tat org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testContainsAnyCharArrayWithSupplementaryChars_purify_8(StringUtilsEqualsIndexOfTest.java:1188)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n",
+                "test_function": "public void testContainsAnyCharArrayWithSupplementaryChars_purify_8(){\n    assertEquals(false,StringUtils.containsAny(CharU20001,CharU20000.toCharArray()));\n  }"
+            }
+        ]
+    },
+    "lang_57": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang.LocaleUtilsTest::testToLocale_2Part_purify_8\n\njava.lang.NullPointerException\n\n\tat org.apache.commons.lang.LocaleUtils.isAvailableLocale(LocaleUtils.java:223)\n\n\tat org.apache.commons.lang.LocaleUtilsTest.setUp(LocaleUtilsTest.java:54)\n\n\tat junit.framework.TestCase.runBare(TestCase.java:139)\n\n\tat junit.framework.TestResult$1.protect(TestResult.java:122)\n\n\tat junit.framework.TestResult.runProtected(TestResult.java:142)\n\n\tat junit.framework.TestResult.run(TestResult.java:125)\n\n\tat junit.framework.TestCase.run(TestCase.java:129)\n\n\tat org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:520)\n",
+                "test_function": "public void testToLocale_2Part_purify_8(){\n    try {\n      LocaleUtils.toLocale(\"us_E3\");\n      fail(\"Should fail second part not uppercase\");\n    }"
+            }
+        ]
+    },
+    "lang_43": {
+        "Trigger tests": []
+    },
+    "lang_28": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang3.text.translate.NumericEntityUnescaperTest::testSupplementaryUnescaping\n\njunit.framework.ComparisonFailure: Failed to unescape numeric entities supplementary characters expected:<[\ud803\udc22]> but was:<[\u0c22]>\n\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:261)\n\n\tat org.apache.commons.lang3.text.translate.NumericEntityUnescaperTest.testSupplementaryUnescaping(NumericEntityUnescaperTest.java:24)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat junit.framework.TestCase.runTest(TestCase.java:176)\n",
+                "test_function": "public void testSupplementaryUnescaping(){\n    NumericEntityUnescaper neu=new NumericEntityUnescaper();\n    String input=\"&#68642;\";\n    String expected=\"\\uD803\\uDC22\";\n    String result=neu.translate(input);\n    assertEquals(\"Failed to unescape numeric entities supplementary characters\",expected,result);\n  }"
+            }
+        ]
+    },
+    "lang_26": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang3.time.FastDateFormatTest::testLang645\n\njunit.framework.ComparisonFailure: expected:<fredag, week [53]> but was:<fredag, week [01]>\n\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:107)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:269)\n\n\tat org.apache.commons.lang3.time.FastDateFormatTest.testLang645(FastDateFormatTest.java:425)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n",
+                "test_function": "public void testLang645(){\n    Locale locale=new Locale(\"sv\",\"SE\");\n    Calendar cal=Calendar.getInstance();\n    cal.set(2010,0,1,12,0,0);\n    Date d=cal.getTime();\n    FastDateFormat fdf=FastDateFormat.getInstance(\"EEEE', week 'ww\",locale);\n    assertEquals(\"fredag, week 53\",fdf.format(d));\n  }"
+            }
+        ]
+    },
+    "lang_21": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang3.time.DateUtilsTest::testIsSameLocalTime_Cal_purify_3\n\njunit.framework.AssertionFailedError: LANG-677\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.assertTrue(Assert.java:22)\n\n\tat junit.framework.Assert.assertFalse(Assert.java:39)\n\n\tat junit.framework.TestCase.assertFalse(TestCase.java:210)\n\n\tat org.apache.commons.lang3.time.DateUtilsTest.testIsSameLocalTime_Cal_purify_3(DateUtilsTest.java:1606)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testIsSameLocalTime_Cal_purify_3(){\n    GregorianCalendar cal1=new GregorianCalendar(TimeZone.getTimeZone(\"GMT+1\"));\n    GregorianCalendar cal2=new GregorianCalendar(TimeZone.getTimeZone(\"GMT-1\"));\n    cal1.set(2004,6,9,13,45,0);\n    cal1.set(Calendar.MILLISECOND,0);\n    cal2.set(2004,6,9,13,45,0);\n    cal2.set(Calendar.MILLISECOND,0);\n    Calendar cal3=Calendar.getInstance();\n    Calendar cal4=Calendar.getInstance();\n    cal3.set(2004,6,9,4,0,0);\n    cal4.set(2004,6,9,16,0,0);\n    cal3.set(Calendar.MILLISECOND,0);\n    cal4.set(Calendar.MILLISECOND,0);\n    assertFalse(\"LANG-677\",DateUtils.isSameLocalTime(cal3,cal4));\n  }"
+            }
+        ]
+    },
+    "lang_49": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang.math.FractionTest::testReduce_purify_1\n\njunit.framework.AssertionFailedError: expected same:<0/100> was not:<0/1>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotSame(Assert.java:325)\n\n\tat junit.framework.Assert.assertSame(Assert.java:288)\n\n\tat junit.framework.Assert.assertSame(Assert.java:296)\n\n\tat junit.framework.TestCase.assertSame(TestCase.java:465)\n\n\tat org.apache.commons.lang.math.FractionTest.testReduce_purify_1(FractionTest.java:1527)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n",
+                "test_function": "public void testReduce_purify_1(){\n    Fraction f=null;\n    f=Fraction.getFraction(50,75);\n    Fraction result=f.reduce();\n    f=Fraction.getFraction(-2,-3);\n    result=f.reduce();\n    f=Fraction.getFraction(2,-3);\n    result=f.reduce();\n    f=Fraction.getFraction(-2,3);\n    result=f.reduce();\n    f=Fraction.getFraction(2,3);\n    result=f.reduce();\n    f=Fraction.getFraction(0,1);\n    result=f.reduce();\n    f=Fraction.getFraction(0,100);\n    result=f.reduce();\n    assertSame(result,Fraction.ZERO);\n  }"
+            }
+        ]
+    },
+    "lang_48": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang.builder.EqualsBuilderTest::testBigDecimal_purify_2\n\njunit.framework.AssertionFailedError\n\n\tat junit.framework.Assert.fail(Assert.java:55)\n\n\tat junit.framework.Assert.assertTrue(Assert.java:22)\n\n\tat junit.framework.Assert.assertTrue(Assert.java:31)\n\n\tat junit.framework.TestCase.assertTrue(TestCase.java:201)\n\n\tat org.apache.commons.lang.builder.EqualsBuilderTest.testBigDecimal_purify_2(EqualsBuilderTest.java:1490)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testBigDecimal_purify_2(){\n    BigDecimal o1=new BigDecimal(\"2.0\");\n    BigDecimal o2=new BigDecimal(\"2.00\");\n    assertTrue(new EqualsBuilder().append(o1,o2).isEquals());\n  }"
+            }
+        ]
+    },
+    "lang_61": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang.text.StrBuilderTest::testLang294\n\njava.lang.ArrayIndexOutOfBoundsException\n\n\tat java.lang.System.arraycopy(Native Method)\n\n\tat org.apache.commons.lang.text.StrBuilder.deleteImpl(StrBuilder.java:909)\n\n\tat org.apache.commons.lang.text.StrBuilder.deleteAll(StrBuilder.java:978)\n\n\tat org.apache.commons.lang.text.StrBuilderTest.testLang294(StrBuilderTest.java:2402)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n",
+                "test_function": "public void testLang294(){\n    StrBuilder sb=new StrBuilder(\"\\n%BLAH%\\nDo more stuff\\neven more stuff\\n%BLAH%\\n\");\n    sb.deleteAll(\"\\n%BLAH%\");\n    assertEquals(\"\\nDo more stuff\\neven more stuff\\n\",sb.toString());\n  }"
+            }
+        ]
+    },
+    "lang_14": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang3.StringUtilsEqualsIndexOfTest::testEquals_purify_6\n\njunit.framework.AssertionFailedError\n\n\tat junit.framework.Assert.fail(Assert.java:55)\n\n\tat junit.framework.Assert.assertTrue(Assert.java:22)\n\n\tat junit.framework.Assert.assertTrue(Assert.java:31)\n\n\tat junit.framework.TestCase.assertTrue(TestCase.java:201)\n\n\tat org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testEquals_purify_6(StringUtilsEqualsIndexOfTest.java:1557)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testEquals_purify_6(){\n    final CharSequence fooCs=FOO, barCs=BAR, foobarCs=FOOBAR;\n    assertTrue(StringUtils.equals((CharSequence)new CustomCharSequence(FOO),fooCs));\n  }"
+            }
+        ]
+    },
+    "lang_40": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang.StringUtilsEqualsIndexOfTest::testContainsIgnoreCase_LocaleIndependence\n\njunit.framework.AssertionFailedError: en: 0 \u00df SS\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.assertTrue(Assert.java:22)\n\n\tat junit.framework.Assert.assertFalse(Assert.java:39)\n\n\tat junit.framework.TestCase.assertFalse(TestCase.java:210)\n\n\tat org.apache.commons.lang.StringUtilsEqualsIndexOfTest.testContainsIgnoreCase_LocaleIndependence(StringUtilsEqualsIndexOfTest.java:479)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testContainsIgnoreCase_LocaleIndependence(){\n    Locale orig=Locale.getDefault();\n    Locale[] locales={Locale.ENGLISH,new Locale(\"tr\"),Locale.getDefault()}"
+            }
+        ]
+    },
+    "lang_54": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang.LocaleUtilsTest::testLang328\n\njava.lang.IllegalArgumentException: Invalid locale format: fr__POSIX\n\n\tat org.apache.commons.lang.LocaleUtils.toLocale(LocaleUtils.java:90)\n\n\tat org.apache.commons.lang.LocaleUtilsTest.assertValidToLocale(LocaleUtilsTest.java:113)\n\n\tat org.apache.commons.lang.LocaleUtilsTest.testLang328(LocaleUtilsTest.java:556)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat junit.framework.TestCase.runTest(TestCase.java:176)\n",
+                "test_function": "public void testLang328(){\n    assertValidToLocale(\"fr__POSIX\",\"fr\",\"\",\"POSIX\");\n  }"
+            }
+        ]
+    },
+    "lang_25": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang3.text.translate.EntityArraysTest::testISO8859_1_ESCAPE\n\njunit.framework.AssertionFailedError: One or more errors detected\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.assertTrue(Assert.java:22)\n\n\tat junit.framework.TestCase.assertTrue(TestCase.java:192)\n\n\tat org.apache.commons.lang3.text.translate.EntityArraysTest.testISO8859_1_ESCAPE(EntityArraysTest.java:88)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n",
+                "test_function": "public void testISO8859_1_ESCAPE(){\n    Set<String> col0=new HashSet<String>();\n    Set<String> col1=new HashSet<String>();\n    String[][] sa=EntityArrays.ISO8859_1_ESCAPE();\n    boolean success=true;\n    for (int i=0; i < sa.length; i++) {\n      boolean add0=col0.add(sa[i][0]);\n      boolean add1=col1.add(sa[i][1]);\n      if (!add0) {\n        success=false;\n        System.out.println(\"Already added entry 0: \" + i + \" \"+ sa[i][0]+ \" \"+ sa[i][1]);\n      }"
+            }
+        ]
+    },
+    "lang_6": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang3.StringUtilsTest::testEscapeSurrogatePairs_purify_2\n\njava.lang.StringIndexOutOfBoundsException: String index out of range: 2\n\n\tat java.lang.String.charAt(String.java:658)\n\n\tat java.lang.Character.codePointAt(Character.java:4903)\n\n\tat org.apache.commons.lang3.text.translate.CharSequenceTranslator.translate(CharSequenceTranslator.java:84)\n\n\tat org.apache.commons.lang3.text.translate.CharSequenceTranslator.translate(CharSequenceTranslator.java:36)\n\n\tat org.apache.commons.lang3.StringEscapeUtils.escapeCsv(StringEscapeUtils.java:237)\n\n\tat org.apache.commons.lang3.StringUtilsTest.testEscapeSurrogatePairs_purify_2(StringUtilsTest.java:2909)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n",
+                "test_function": "public void testEscapeSurrogatePairs_purify_2() throws Exception {\n    assertEquals(\"\\uD800\\uDC00\",StringEscapeUtils.escapeCsv(\"\\uD800\\uDC00\"));\n  }"
+            }
+        ]
+    },
+    "lang_44": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang.NumberUtilsTest::testLang457\n\njava.lang.StringIndexOutOfBoundsException: String index out of range: 0\n\n\tat java.lang.String.charAt(String.java:658)\n\n\tat org.apache.commons.lang.NumberUtils.createNumber(NumberUtils.java:135)\n\n\tat org.apache.commons.lang.NumberUtilsTest.testLang457(NumberUtilsTest.java:726)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat junit.framework.TestCase.runTest(TestCase.java:176)\n",
+                "test_function": "public void testLang457(){\n    String[] badInputs=new String[]{\"l\",\"L\",\"f\",\"F\",\"junk\",\"bobL\"}"
+            }
+        ]
+    },
+    "lang_51": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang.BooleanUtilsTest::test_toBoolean_String_purify_37\n\njava.lang.StringIndexOutOfBoundsException: String index out of range: 3\n\n\tat java.lang.String.charAt(String.java:658)\n\n\tat org.apache.commons.lang.BooleanUtils.toBoolean(BooleanUtils.java:686)\n\n\tat org.apache.commons.lang.BooleanUtilsTest.test_toBoolean_String_purify_37(BooleanUtilsTest.java:488)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat junit.framework.TestCase.runTest(TestCase.java:176)\n",
+                "test_function": "public void test_toBoolean_String_purify_37(){\n    assertEquals(false,BooleanUtils.toBoolean(\"tru\"));\n  }"
+            }
+        ]
+    },
+    "lang_4": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang3.text.translate.LookupTranslatorTest::testLang882_purify_2\n\njunit.framework.AssertionFailedError: Incorrect value expected:<[two]> but was:<[]>\n\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\n\tat org.apache.commons.lang3.text.translate.LookupTranslatorTest.testLang882_purify_2(LookupTranslatorTest.java:87)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)\n\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n",
+                "test_function": "public void testLang882_purify_2() throws IOException {\n    final LookupTranslator lt=new LookupTranslator(new CharSequence[][]{{new StringBuffer(\"one\"),new StringBuffer(\"two\")}"
+            }
+        ]
+    },
+    "lang_13": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang3.SerializationUtilsTest::testPrimitiveTypeClassSerialization\n\norg.apache.commons.lang3.SerializationException: ClassNotFoundException while reading cloned object data\n\n\tat org.apache.commons.lang3.SerializationUtils.clone(SerializationUtils.java:55)\n\n\tat org.apache.commons.lang3.SerializationUtilsTest.testPrimitiveTypeClassSerialization(SerializationUtilsTest.java:633)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat junit.framework.TestCase.runTest(TestCase.java:176)\n\n\tat junit.framework.TestCase.runBare(TestCase.java:141)\n",
+                "test_function": "public void testPrimitiveTypeClassSerialization(){\n    Class<?>[] primitiveTypes={byte.class,short.class,int.class,long.class,float.class,double.class,boolean.class,char.class,void.class}"
+            }
+        ]
+    },
+    "lang_22": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang3.math.FractionTest::testReduce_purify_5\n\njunit.framework.AssertionFailedError: expected:<1> but was:<2>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:234)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:241)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:409)\n\n\tat org.apache.commons.lang3.math.FractionTest.testReduce_purify_5(FractionTest.java:2448)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n",
+                "test_function": "public void testReduce_purify_5(){\n    Fraction f=null;\n    f=Fraction.getFraction(50,75);\n    Fraction result=f.reduce();\n    f=Fraction.getFraction(-2,-3);\n    result=f.reduce();\n    f=Fraction.getFraction(2,-3);\n    result=f.reduce();\n    f=Fraction.getFraction(-2,3);\n    result=f.reduce();\n    f=Fraction.getFraction(2,3);\n    result=f.reduce();\n    f=Fraction.getFraction(0,1);\n    result=f.reduce();\n    f=Fraction.getFraction(0,100);\n    result=f.reduce();\n    f=Fraction.getFraction(Integer.MIN_VALUE,2);\n    result=f.reduce();\n    assertEquals(1,result.getDenominator());\n  }"
+            }
+        ]
+    },
+    "lang_53": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang.time.DateUtilsTest::testRoundLang346_purify_3\n\njunit.framework.AssertionFailedError: Minute Round Up Failed expected:<Mon Jul 02 08:09:00 PDT 2007> but was:<Mon Jul 02 08:01:00 PDT 2007>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:244)\n\n\tat org.apache.commons.lang.time.DateUtilsTest.testRoundLang346_purify_3(DateUtilsTest.java:1173)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testRoundLang346_purify_3() throws Exception {\n    TimeZone.setDefault(defaultZone);\n    dateTimeParser.setTimeZone(defaultZone);\n    Calendar testCalendar=Calendar.getInstance();\n    testCalendar.set(2007,6,2,8,8,50);\n    Date date=testCalendar.getTime();\n    assertEquals(\"Minute Round Up Failed\",dateTimeParser.parse(\"July 2, 2007 08:09:00.000\"),DateUtils.round(date,Calendar.MINUTE));\n  }"
+            }
+        ]
+    },
+    "lang_52": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang.StringEscapeUtilsTest::testEscapeJavaScript_purify_5\n\njunit.framework.ComparisonFailure: expected:<...ipt>alert(\\'aaa\\');<[\\]/script>\\';> but was:<...ipt>alert(\\'aaa\\');<[]/script>\\';>\n\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:107)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:269)\n\n\tat org.apache.commons.lang.StringEscapeUtilsTest.testEscapeJavaScript_purify_5(StringEscapeUtilsTest.java:502)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n",
+                "test_function": "public void testEscapeJavaScript_purify_5(){\n    assertEquals(\"document.getElementById(\\\\\\\"test\\\\\\\").value = \\\\'<script>alert(\\\\'aaa\\\\');<\\\\/script>\\\\';\",StringEscapeUtils.escapeJavaScript(\"document.getElementById(\\\"test\\\").value = '<script>alert('aaa');</script>';\"));\n  }"
+            }
+        ]
+    },
+    "lang_55": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang.time.StopWatchTest::testLang315\n\njunit.framework.AssertionFailedError\n\n\tat junit.framework.Assert.fail(Assert.java:55)\n\n\tat junit.framework.Assert.assertTrue(Assert.java:22)\n\n\tat junit.framework.Assert.assertTrue(Assert.java:31)\n\n\tat junit.framework.TestCase.assertTrue(TestCase.java:201)\n\n\tat org.apache.commons.lang.time.StopWatchTest.testLang315(StopWatchTest.java:198)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testLang315(){\n    StopWatch watch=new StopWatch();\n    watch.start();\n    try {\n      Thread.sleep(200);\n    }"
+            }
+        ]
+    },
+    "lang_45": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang.WordUtilsTest::testAbbreviate_purify_18\n\njava.lang.StringIndexOutOfBoundsException: String index out of range: 15\n\n\tat java.lang.String.substring(String.java:1963)\n\n\tat org.apache.commons.lang.WordUtils.abbreviate(WordUtils.java:324)\n\n\tat org.apache.commons.lang.WordUtilsTest.testAbbreviate_purify_18(WordUtilsTest.java:760)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat junit.framework.TestCase.runTest(TestCase.java:176)\n",
+                "test_function": "public void testAbbreviate_purify_18(){\n    assertEquals(\"0123456789\",WordUtils.abbreviate(\"0123456789\",15,20,null));\n  }"
+            }
+        ]
+    },
+    "lang_46": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang.StringEscapeUtilsTest::testEscapeJavaWithSlash\n\njunit.framework.ComparisonFailure: expected:<...tring with a slash ([]/) in it> but was:<...tring with a slash ([\\]/) in it>\n\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:107)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:269)\n\n\tat org.apache.commons.lang.StringEscapeUtilsTest.testEscapeJavaWithSlash(StringEscapeUtilsTest.java:117)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n",
+                "test_function": "public void testEscapeJavaWithSlash(){\n    final String input=\"String with a slash (/) in it\";\n    final String expected=input;\n    final String actual=StringEscapeUtils.escapeJava(input);\n    assertEquals(expected,actual);\n  }"
+            }
+        ]
+    },
+    "lang_47": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang.text.StrBuilderTest::testLang412Right\n\njava.lang.NullPointerException\n\n\tat org.apache.commons.lang.text.StrBuilder.appendFixedWidthPadRight(StrBuilder.java:949)\n\n\tat org.apache.commons.lang.text.StrBuilderTest.testLang412Right(StrBuilderTest.java:2460)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat junit.framework.TestCase.runTest(TestCase.java:176)\n\n\tat junit.framework.TestCase.runBare(TestCase.java:141)\n",
+                "test_function": "public void testLang412Right(){\n    StrBuilder sb=new StrBuilder();\n    sb.appendFixedWidthPadRight(null,10,'*');\n    assertEquals(\"Failed to invoke appendFixedWidthPadRight correctly\",\"**********\",sb.toString());\n  }"
+            }
+        ]
+    },
+    "lang_60": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang.text.StrBuilderTest::testLang295_purify_2\n\njunit.framework.AssertionFailedError: The indexOf(char) method is looking beyond the end of the string expected:<-1> but was:<7>\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:234)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:401)\n\n\tat org.apache.commons.lang.text.StrBuilderTest.testLang295_purify_2(StrBuilderTest.java:2480)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n",
+                "test_function": "public void testLang295_purify_2(){\n    StrBuilder sb=new StrBuilder(\"onetwothree\");\n    sb.deleteFirst(\"three\");\n    assertEquals(\"The indexOf(char) method is looking beyond the end of the string\",-1,sb.indexOf('h'));\n  }"
+            }
+        ]
+    },
+    "lang_19": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.lang3.text.translate.NumericEntityUnescaperTest::testUnfinishedEntity\n\njava.lang.StringIndexOutOfBoundsException: String index out of range: 19\n\n\tat java.lang.String.charAt(String.java:658)\n\n\tat org.apache.commons.lang3.text.translate.NumericEntityUnescaper.translate(NumericEntityUnescaper.java:33)\n\n\tat org.apache.commons.lang3.text.translate.CharSequenceTranslator.translate(CharSequenceTranslator.java:67)\n\n\tat org.apache.commons.lang3.text.translate.CharSequenceTranslator.translate(CharSequenceTranslator.java:36)\n\n\tat org.apache.commons.lang3.text.translate.NumericEntityUnescaperTest.testUnfinishedEntity(NumericEntityUnescaperTest.java:60)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testUnfinishedEntity(){\n    NumericEntityUnescaper neu=new NumericEntityUnescaper();\n    String input=\"Test &#x30 not test\";\n    String expected=\"Test \\u0030 not test\";\n    String result=neu.translate(input);\n    assertEquals(\"Failed to support unfinished entities (i.e. missing semi-colon\",expected,result);\n  }"
+            }
+        ]
+    },
+    "mockito_11": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.mockito.internal.creation.DelegatingMethodTest::equals_should_return_true_when_self\n\njunit.framework.AssertionFailedError\n\n\tat junit.framework.Assert.fail(Assert.java:55)\n\n\tat junit.framework.Assert.assertTrue(Assert.java:22)\n\n\tat junit.framework.Assert.assertTrue(Assert.java:31)\n\n\tat org.mockito.internal.creation.DelegatingMethodTest.equals_should_return_true_when_self(DelegatingMethodTest.java:61)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n",
+                "test_function": "public void equals_should_return_true_when_self() throws Exception {\n    assertTrue(delegatingMethod.equals(delegatingMethod));\n  }"
+            }
+        ]
+    },
+    "mockito_22": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.mockito.internal.matchers.EqualityTest::shouldKnowIfObjectsAreEqual_purify_8\n\njava.lang.RuntimeException\n\n\tat org.mockito.internal.matchers.EqualityTest$BadEquals.equals(EqualityTest.java:24)\n\n\tat org.mockito.internal.matchers.Equality.areEqual(Equality.java:18)\n\n\tat org.mockito.internal.matchers.EqualityTest.shouldKnowIfObjectsAreEqual_purify_8(EqualityTest.java:166)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)\n",
+                "test_function": "public void shouldKnowIfObjectsAreEqual_purify_8() throws Exception {\n    int[] arr=new int[]{1,2}"
+            }
+        ]
+    },
+    "mockito_8": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.mockito.internal.util.reflection.GenericMetadataSupportTest::typeVariable_of_self_type\n\njava.lang.StackOverflowError\n\n\tat org.mockito.internal.util.reflection.GenericMetadataSupport.getActualTypeArgumentFor(GenericMetadataSupport.java:119)\n\n\tat org.mockito.internal.util.reflection.GenericMetadataSupport.getActualTypeArgumentFor(GenericMetadataSupport.java:126)\n\n\tat org.mockito.internal.util.reflection.GenericMetadataSupport.getActualTypeArgumentFor(GenericMetadataSupport.java:126)\n\n\tat org.mockito.internal.util.reflection.GenericMetadataSupport.getActualTypeArgumentFor(GenericMetadataSupport.java:126)\n\n\tat org.mockito.internal.util.reflection.GenericMetadataSupport.getActualTypeArgumentFor(GenericMetadataSupport.java:126)\n\n\tat org.mockito.internal.util.reflection.GenericMetadataSupport.getActualTypeArgumentFor(GenericMetadataSupport.java:126)\n\n\tat org.mockito.internal.util.reflection.GenericMetadataSupport.getActualTypeArgumentFor(GenericMetadataSupport.java:126)\n\n\tat org.mockito.internal.util.reflection.GenericMetadataSupport.getActualTypeArgumentFor(GenericMetadataSupport.java:126)\n",
+                "test_function": "public void typeVariable_of_self_type(){\n    GenericMetadataSupport genericMetadata=inferFrom(GenericsSelfReference.class).resolveGenericReturnType(firstNamedMethod(\"self\",GenericsSelfReference.class));\n    assertThat(genericMetadata.rawType()).isEqualTo(GenericsSelfReference.class);\n  }"
+            }
+        ]
+    },
+    "mockito_38": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.mockitousage.bugs.ActualInvocationHasNullArgumentNPEBugTest::shouldAllowPassingNullArgument\n\njava.lang.NullPointerException\n\n\tat org.mockito.internal.verification.argumentmatching.ArgumentMatchingTool.toStringEquals(ArgumentMatchingTool.java:46)\n\n\tat org.mockito.internal.verification.argumentmatching.ArgumentMatchingTool.getSuspiciouslyNotMatchingArgsIndexes(ArgumentMatchingTool.java:24)\n\n\tat org.mockito.internal.verification.checkers.MissingInvocationChecker.check(MissingInvocationChecker.java:34)\n\n\tat org.mockito.internal.verification.Times.verify(Times.java:30)\n\n\tat org.mockito.internal.MockHandler.intercept(MockHandler.java:76)\n\n\tat org.mockito.internal.creation.MethodInterceptorFilter.intercept(MethodInterceptorFilter.java:45)\n\n\tat org.mockitousage.bugs.ActualInvocationHasNullArgumentNPEBugTest$Fun$$EnhancerByMockitoWithCGLIB$$bb7e91c0.doFun(<generated>)\n\n\tat org.mockitousage.bugs.ActualInvocationHasNullArgumentNPEBugTest.shouldAllowPassingNullArgument(ActualInvocationHasNullArgumentNPEBugTest.java:26)\n",
+                "test_function": "public void shouldAllowPassingNullArgument(){\n    Fun mockFun=mock(Fun.class);\n    when(mockFun.doFun((String)anyObject())).thenReturn(\"value\");\n    mockFun.doFun(null);\n    try {\n      verify(mockFun).doFun(\"hello\");\n    }"
+            }
+        ]
+    },
+    "mockito_12": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.mockitousage.annotation.CaptorAnnotationTest::shouldLookForAnnotatedCaptorsInSuperClasses\n\njava.lang.ClassCastException: sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl cannot be cast to java.lang.Class\n\n\tat org.mockito.internal.util.reflection.GenericMaster.getGenericType(GenericMaster.java:19)\n\n\tat org.mockito.internal.configuration.DefaultAnnotationEngine.processAnnotationOn(DefaultAnnotationEngine.java:76)\n\n\tat org.mockito.internal.configuration.DefaultAnnotationEngine.createMockFor(DefaultAnnotationEngine.java:42)\n\n\tat org.mockito.internal.configuration.InjectingAnnotationEngine.createMockFor(InjectingAnnotationEngine.java:35)\n\n\tat org.mockito.configuration.MockitoConfiguration$1.createMockFor(MockitoConfiguration.java:56)\n\n\tat org.mockito.MockitoAnnotations.processAnnotationDeprecatedWay(MockitoAnnotations.java:119)\n\n\tat org.mockito.MockitoAnnotations.scan(MockitoAnnotations.java:108)\n\n\tat org.mockito.MockitoAnnotations.initMocks(MockitoAnnotations.java:95)\n",
+                "test_function": "public void shouldLookForAnnotatedCaptorsInSuperClasses() throws Exception {\n  }"
+            }
+        ]
+    },
+    "jsoup_79": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.jsoup.nodes.TextNodeTest::testLeadNodesHaveNoChildren\n\njava.lang.UnsupportedOperationException: Leaf Nodes do not have child nodes.\n\n\tat org.jsoup.nodes.LeafNode.ensureChildNodes(LeafNode.java:67)\n\n\tat org.jsoup.nodes.Node.childNodes(Node.java:159)\n\n\tat org.jsoup.nodes.TextNodeTest.testLeadNodesHaveNoChildren(TextNodeTest.java:148)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)\n",
+                "test_function": "public void testLeadNodesHaveNoChildren(){\n    Document doc=Jsoup.parse(\"<div>Hello there</div>\");\n    Element div=doc.select(\"div\").first();\n    TextNode tn=(TextNode)div.childNode(0);\n    List<Node> nodes=tn.childNodes();\n    assertEquals(0,nodes.size());\n  }"
+            }
+        ]
+    },
+    "jsoup_43": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.jsoup.nodes.ElementTest::testGetSiblingsWithDuplicateContent_purify_5\n\njunit.framework.AssertionFailedError: expected:<[]is> but was:<[th]is>\n\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\n\tat org.jsoup.nodes.ElementTest.testGetSiblingsWithDuplicateContent_purify_5(ElementTest.java:1664)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)\n",
+                "test_function": "public void testGetSiblingsWithDuplicateContent_purify_5(){\n    Document doc=Jsoup.parse(\"<div><p>Hello<p id=1>there<p>this<p>this<p>is<p>an<p id=last>element</div>\");\n    Element p=doc.getElementById(\"1\");\n    assertEquals(\"is\",p.nextElementSibling().nextElementSibling().nextElementSibling().text());\n  }"
+            }
+        ]
+    },
+    "jsoup_9": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.jsoup.nodes.EntitiesTest::unescape_purify_1\n\njunit.framework.AssertionFailedError: expected:<...<> \u00c5 \u03c0 \u03c0 \u65b0 there &! [\u00be]> but was:<...<> \u00c5 \u03c0 \u03c0 \u65b0 there &! [&frac34;]>\n\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\n\tat org.jsoup.nodes.EntitiesTest.unescape_purify_1(EntitiesTest.java:98)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)\n",
+                "test_function": "public void unescape_purify_1(){\n    String text=\"Hello &amp;&LT&gt; &angst &#960; &#960 &#x65B0; there &! &frac34;\";\n    assertEquals(\"Hello &<> \u00c5 \u03c0 \u03c0 \u65b0 there &! \u00be\",Entities.unescape(text));\n  }"
+            }
+        ]
+    },
+    "jsoup_88": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.jsoup.nodes.AttributeTest::booleanAttributesAreEmptyStringValues_purify_3\n\njunit.framework.AssertionFailedError: expected:<> but was:<null>\n\n\tat org.junit.Assert.fail(Assert.java:88)\n\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\n\tat org.jsoup.nodes.AttributeTest.booleanAttributesAreEmptyStringValues_purify_3(AttributeTest.java:150)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void booleanAttributesAreEmptyStringValues_purify_3(){\n    Document doc=Jsoup.parse(\"<div hidden>\");\n    Attributes attributes=doc.body().child(0).attributes();\n    Attribute first=attributes.iterator().next();\n    assertEquals(\"\",first.getValue());\n  }"
+            }
+        ]
+    },
+    "jsoup_85": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.jsoup.nodes.AttributeTest::validatesKeysNotEmpty\n\njunit.framework.AssertionFailedError: Expected exception: java.lang.IllegalArgumentException\n\n\tat org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:32)\n\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)\n\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)\n\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)\n\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\n\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\n\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\n\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\n",
+                "test_function": "public void validatesKeysNotEmpty(){\n    Attribute attr=new Attribute(\" \",\"Check\");\n  }"
+            }
+        ]
+    },
+    "jsoup_4": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.jsoup.nodes.EntitiesTest::caseSensitive_purify_2\n\njunit.framework.AssertionFailedError: expected:<[\u00dc] \u00fc & &> but was:<[\u00fc] \u00fc & &>\n\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\n\tat org.jsoup.nodes.EntitiesTest.caseSensitive_purify_2(EntitiesTest.java:164)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)\n",
+                "test_function": "public void caseSensitive_purify_2(){\n    String unescaped=\"\u00dc \u00fc & &\";\n    String escaped=\"&Uuml; &uuml; &amp; &AMP\";\n    assertEquals(\"\u00dc \u00fc & &\",Entities.unescape(escaped));\n  }"
+            }
+        ]
+    },
+    "jsoup_26": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.jsoup.safety.CleanerTest::handlesFramesets_purify_3\n\njava.lang.NullPointerException\n\n\tat org.jsoup.safety.Cleaner.copySafeNodes(Cleaner.java:55)\n\n\tat org.jsoup.safety.Cleaner.clean(Cleaner.java:32)\n\n\tat org.jsoup.safety.CleanerTest.handlesFramesets_purify_3(CleanerTest.java:487)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)\n",
+                "test_function": "public void handlesFramesets_purify_3(){\n    String dirty=\"<html><head><script></script><noscript></noscript></head><frameset><frame src=\\\"foo\\\" /><frame src=\\\"foo\\\" /></frameset></html>\";\n    String clean=Jsoup.clean(dirty,Whitelist.basic());\n    Document dirtyDoc=Jsoup.parse(dirty);\n    Document cleanDoc=new Cleaner(Whitelist.basic()).clean(dirtyDoc);\n    assertEquals(0,cleanDoc.body().childNodes().size());\n  }"
+            }
+        ]
+    },
+    "jsoup_57": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.jsoup.nodes.ElementTest::testChainedRemoveAttributes\n\njava.util.ConcurrentModificationException\n\n\tat java.util.LinkedHashMap$LinkedHashIterator.nextNode(LinkedHashMap.java:719)\n\n\tat java.util.LinkedHashMap$LinkedKeyIterator.next(LinkedHashMap.java:742)\n\n\tat org.jsoup.nodes.Attributes.removeIgnoreCase(Attributes.java:103)\n\n\tat org.jsoup.nodes.Node.removeAttr(Node.java:112)\n\n\tat org.jsoup.nodes.ElementTest.testChainedRemoveAttributes(ElementTest.java:1751)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testChainedRemoveAttributes(){\n    String html=\"<a one two three four>Text</a>\";\n    Document doc=Jsoup.parse(html);\n    Element a=doc.select(\"a\").first();\n    a.removeAttr(\"zero\").removeAttr(\"one\").removeAttr(\"two\").removeAttr(\"three\").removeAttr(\"four\").removeAttr(\"five\");\n    assertEquals(\"<a>Text</a>\",a.outerHtml());\n  }"
+            }
+        ]
+    },
+    "jsoup_27": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.jsoup.helper.DataUtilTest::testQuotedCharset_purify_4\n\njunit.framework.AssertionFailedError: expected:<null> but was:<UNSUPPORTED>\n\n\tat org.junit.Assert.fail(Assert.java:88)\n\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\n\tat org.jsoup.helper.DataUtilTest.testQuotedCharset_purify_4(DataUtilTest.java:226)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testQuotedCharset_purify_4(){\n    assertEquals(null,DataUtil.getCharsetFromContentType(\"text/html; charset=\\\"Unsupported\\\"\"));\n  }"
+            }
+        ]
+    },
+    "cli_29": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.cli.UtilTest::testStripLeadingAndTrailingQuotes_purify_5\n\njunit.framework.ComparisonFailure: expected:<[\"]> but was:<[]>\n\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\n\n\tat junit.framework.Assert.assertEquals(Assert.java:107)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:269)\n\n\tat org.apache.commons.cli.UtilTest.testStripLeadingAndTrailingQuotes_purify_5(UtilTest.java:126)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n",
+                "test_function": "public void testStripLeadingAndTrailingQuotes_purify_5(){\n    assertEquals(\"\\\"\",Util.stripLeadingAndTrailingQuotes(\"\\\"\"));\n  }"
+            }
+        ]
+    },
+    "codec_4": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.codec.binary.Base64Codec13Test::testBinaryEncoder\n\njunit.framework.AssertionFailedError: BinaryEncoder test-1\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.assertTrue(Assert.java:22)\n\n\tat junit.framework.TestCase.assertTrue(TestCase.java:192)\n\n\tat org.apache.commons.codec.binary.Base64Codec13Test.testBinaryEncoder(Base64Codec13Test.java:422)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n",
+                "test_function": "public void testBinaryEncoder() throws EncoderException {\n    BinaryEncoder enc=new Base64();\n    for (int i=0; i < STRINGS.length; i++) {\n      if (STRINGS[i] != null) {\n        byte[] base64=utf8(STRINGS[i]);\n        byte[] binary=BYTES[i];\n        boolean b=Arrays.equals(base64,enc.encode(binary));\n        assertTrue(\"BinaryEncoder test-\" + i,b);\n      }"
+            }
+        ]
+    },
+    "codec_6": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.codec.binary.Base64InputStreamTest::testCodec101_purify_2\n\njunit.framework.AssertionFailedError: Codec101: Second read should report end-of-stream [c=2]\n\n\tat junit.framework.Assert.fail(Assert.java:57)\n\n\tat junit.framework.Assert.assertTrue(Assert.java:22)\n\n\tat junit.framework.TestCase.assertTrue(TestCase.java:192)\n\n\tat org.apache.commons.codec.binary.Base64InputStreamTest.testCodec101_purify_2(Base64InputStreamTest.java:442)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n",
+                "test_function": "public void testCodec101_purify_2() throws Exception {\n    byte[] codec101=StringUtils.getBytesUtf8(Base64TestData.CODEC_101_MULTIPLE_OF_3);\n    ByteArrayInputStream bais=new ByteArrayInputStream(codec101);\n    Base64InputStream in=new Base64InputStream(bais);\n    byte[] result=new byte[8192];\n    int c=in.read(result);\n    c=in.read(result);\n    assertTrue(\"Codec101: Second read should report end-of-stream [c=\" + c + \"]\",c < 0);\n  }"
+            }
+        ]
+    },
+    "codec_14": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.codec.language.bm.PhoneticEngineRegressionTest::testCompatibilityWithOriginalVersion_purify_2\n\njunit.framework.AssertionFailedError: expected:<...dzn|bntsn|bnzn|vndzn[]> but was:<...dzn|bntsn|bnzn|vndzn[|vntsn]>\n\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\n\tat org.apache.commons.codec.language.bm.PhoneticEngineRegressionTest.testCompatibilityWithOriginalVersion_purify_2(PhoneticEngineRegressionTest.java:245)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)\n",
+                "test_function": "public void testCompatibilityWithOriginalVersion_purify_2(){\n    Map<String,String> args=new TreeMap<String,String>();\n    args.put(\"nameType\",\"GENERIC\");\n    args.put(\"ruleType\",\"APPROX\");\n    assertEquals(encode(args,true,\"Bendzin\"),\"bndzn|bntsn|bnzn|vndzn|vntsn\");\n  }"
+            }
+        ]
+    },
+    "codec_18": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.codec.binary.StringUtilsTest::testEqualsCS1_purify_5\n\njava.lang.StringIndexOutOfBoundsException: String index out of range: 3\n\n\tat java.lang.AbstractStringBuilder.charAt(AbstractStringBuilder.java:237)\n\n\tat java.lang.StringBuilder.charAt(StringBuilder.java:82)\n\n\tat org.apache.commons.codec.binary.CharSequenceUtils.regionMatches(CharSequenceUtils.java:35)\n\n\tat org.apache.commons.codec.binary.StringUtils.equals(StringUtils.java:40)\n\n\tat org.apache.commons.codec.binary.StringUtilsTest.testEqualsCS1_purify_5(StringUtilsTest.java:530)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+                "test_function": "public void testEqualsCS1_purify_5(){\n    Assert.assertFalse(StringUtils.equals(new StringBuilder(\"abcd\"),new StringBuilder(\"abc\")));\n  }"
+            }
+        ]
+    },
+    "codec_3": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.codec.language.DoubleMetaphone2Test::testDoubleMetaphoneAlternate\n\njunit.framework.ComparisonFailure: Test [19]=Angier expected:<AN[J]R> but was:<AN[K]R>\n\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\n\n\tat junit.framework.TestCase.assertEquals(TestCase.java:261)\n\n\tat org.apache.commons.codec.language.DoubleMetaphone2Test.testDoubleMetaphoneAlternate(DoubleMetaphone2Test.java:78)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\n\tat junit.framework.TestCase.runTest(TestCase.java:176)\n",
+                "test_function": "public void testDoubleMetaphoneAlternate(){\n    String value=null;\n    for (int i=0; i < TEST_DATA.length; i++) {\n      value=TEST_DATA[i][0];\n      assertEquals(\"Test [\" + i + \"]=\"+ value,TEST_DATA[i][2],doubleMetaphone.doubleMetaphone(value,true));\n    }"
+            }
+        ]
+    },
+    "codec_8": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.codec.binary.Base64InputStreamTest::testCodec105\n\njava.lang.ArrayIndexOutOfBoundsException: 2\n\n\tat org.apache.commons.codec.binary.Base64.encode(Base64.java:352)\n\n\tat org.apache.commons.codec.binary.Base64InputStream.read(Base64InputStream.java:122)\n\n\tat org.apache.commons.codec.binary.Base64InputStream.read(Base64InputStream.java:55)\n\n\tat org.apache.commons.codec.binary.Base64InputStreamTest.testCodec105(Base64InputStreamTest.java:41)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n",
+                "test_function": "public void testCodec105() throws IOException {\n    Base64InputStream in=new Base64InputStream(new Codec105ErrorInputStream(),true,0,null);\n    for (int i=0; i < 5; i++) {\n      in.read();\n    }"
+            }
+        ]
+    },
+    "codec_10": {
+        "Trigger tests": [
+            {
+                "exception_info": "--- org.apache.commons.codec.language.CaverphoneTest::testEndMb\n\njunit.framework.ComparisonFailure: Source: mbmb expected:<M[PM]1111111> but was:<M[MP]1111111>\n\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\n\n\tat org.apache.commons.codec.StringEncoderAbstractTest.checkEncoding(StringEncoderAbstractTest.java:38)\n\n\tat org.apache.commons.codec.StringEncoderAbstractTest.checkEncodings(StringEncoderAbstractTest.java:43)\n\n\tat org.apache.commons.codec.language.CaverphoneTest.testEndMb(CaverphoneTest.java:157)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n",
+                "test_function": "public void testEndMb() throws EncoderException {\n    String[][] data={{\"mb\",\"M111111111\"}"
+            }
+        ]
+    }
+}
